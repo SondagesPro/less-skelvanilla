@@ -1,0 +1,80 @@
+@media (min-width: @screen-sm-max) {
+  .surveys-list .btn-group {
+    width: 50%;
+  }
+}
+.top-content .form-change-lang{float:right}
+.dir-rtl .top-content .form-change-lang{float:left}
+.no-js .top-content .form-change-lang{display:none}
+
+.top-container .top-content:empty{display:none}
+.group-description:empty{display:none}
+.group-title:empty{display:none}
+
+.question-container {
+  margin-bottom: 1em;
+  border: @question-border-size solid @question-border-color;
+  border-radius: @border-radius;
+  background: @question-bg;
+}
+.question-title-container {
+  padding-top: 1em;
+  padding-bottom:1em;
+  color: @question-text-color;
+  background: @question-text-bg;
+}
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+  color: @question-text-color;
+  background: @question-text-bg;
+}
+.question-number,.question-code{float:left;margin:0 0.3em}
+.question-number:empty,.question-code:empty{display:none}
+
+/* little icon near the question-help */
+.ls-questionhelp{position: relative;}
+.dir-ltr .ls-questionhelp{margin-left:1.2em;}
+.dir-rtl .ls-questionhelp{margin-right:1.2em;}
+
+.ls-questionhelp:before{content:"\f059"}
+.ls-questionhelp:before {
+    display: block;
+    position:absolute;
+    font-family: FontAwesome;
+    font-size: inherit;
+    line-height: inherit;
+    height:100%;
+}
+
+.ls-questionhelp:before {
+    top:50%;
+    margin-top:-0.7em;
+}
+
+.dir-ltr .ls-questionhelp:before {
+    left:-1.1em;
+}
+.dir-rtl .ls-questionhelp:before {
+    right:-1.1em;
+}
+/* tip */
+.hide-tip{
+ display: none;
+}
+
+/**
+ * Specific question part
+ */
+.radio-item label,.checkbox-item label {
+    cursor: pointer;
+}
+.radio-item [type='radio'],.checkbox-item [type='checkbox'] { /* Why we must positionning at same place */
+    cursor: pointer;
+}
+.js td.radio-item,.js td.checkbox-item{
+    cursor: pointer;
+}
+.slider-item {
+    min-height: 50px;
+}
