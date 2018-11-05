@@ -48,21 +48,21 @@
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          14px;
-@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
-@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+@font-size-base:          1rem;
+@font-size-large:         ceil((@font-size-base * 1.25));
+@font-size-small:         ceil((@font-size-base * 0.85));
 
-@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
-@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
-@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
-@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h1:            floor((@font-size-base * 2.6));
+@font-size-h2:            floor((@font-size-base * 2.15));
+@font-size-h3:            ceil((@font-size-base * 1.7));
+@font-size-h4:            ceil((@font-size-base * 1.25));
 @font-size-h5:            @font-size-base;
-@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+@font-size-h6:            ceil((@font-size-base * 0.85));
 
 //** Unit-less `line-height` for use in components like buttons.
-@line-height-base:        1.428571429; // 20/14
+@line-height-base:        1.428571429;
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+@line-height-computed:    floor((@font-size-base * @line-height-base));
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    inherit;
@@ -284,7 +284,7 @@
 
 // Extra small screen / phone
 //** Deprecated `@screen-xs` as of v3.0.1
-@screen-xs:                  480px;
+@screen-xs:                  36em;
 //** Deprecated `@screen-xs-min` as of v3.2.0
 @screen-xs-min:              @screen-xs;
 //** Deprecated `@screen-phone` as of v3.0.1
@@ -292,29 +292,29 @@
 
 // Small screen / tablet
 //** Deprecated `@screen-sm` as of v3.0.1
-@screen-sm:                  768px;
+@screen-sm:                  48em;
 @screen-sm-min:              @screen-sm;
 //** Deprecated `@screen-tablet` as of v3.0.1
 @screen-tablet:              @screen-sm-min;
 
 // Medium screen / desktop
 //** Deprecated `@screen-md` as of v3.0.1
-@screen-md:                  992px;
+@screen-md:                  62em;
 @screen-md-min:              @screen-md;
 //** Deprecated `@screen-desktop` as of v3.0.1
 @screen-desktop:             @screen-md-min;
 
 // Large screen / wide desktop
 //** Deprecated `@screen-lg` as of v3.0.1
-@screen-lg:                  1200px;
+@screen-lg:                  75em;
 @screen-lg-min:              @screen-lg;
 //** Deprecated `@screen-lg-desktop` as of v3.0.1
 @screen-lg-desktop:          @screen-lg-min;
 
 // So media queries don't overlap when required, provide a maximum
-@screen-xs-max:              (@screen-sm-min - 1);
-@screen-sm-max:              (@screen-md-min - 1);
-@screen-md-max:              (@screen-lg-min - 1);
+@screen-xs-max:              (47.9375em);
+@screen-sm-max:              (61.9375em);
+@screen-md-max:              (74.9375em);
 
 
 //== Grid system
@@ -324,7 +324,7 @@
 //** Number of columns in the grid.
 @grid-columns:              12;
 //** Padding between columns. Gets divided in half for the left and right.
-@grid-gutter-width:         30px;
+@grid-gutter-width:         1.5rem;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 @grid-float-breakpoint:     @screen-sm-min;
@@ -357,12 +357,12 @@
 //##
 
 // Basics of a navbar
-@navbar-height:                    50px;
+@navbar-height:                    2rem;
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
-@navbar-collapse-max-height:       340px;
+@navbar-collapse-max-height:       6rem;
 
 @navbar-default-color:             #444;
 @navbar-default-bg:                #f8f8f8;
@@ -419,7 +419,7 @@
 //##
 
 //=== Shared nav styles
-@nav-link-padding:                          10px 15px;
+@nav-link-padding:                          0.7rem 1rem;
 @nav-link-hover-bg:                         @gray-lighter;
 
 @nav-disabled-link-color:                   @gray-light;
@@ -470,7 +470,7 @@
 
 @pager-bg:                             @pagination-bg;
 @pager-border:                         @pagination-border;
-@pager-border-radius:                  15px;
+@pager-border-radius:                  0.5rem;
 
 @pager-hover-bg:                       @pagination-hover-bg;
 
@@ -484,12 +484,12 @@
 //
 //##
 
-@jumbotron-padding:              30px;
+@jumbotron-padding:              1.5em;
 @jumbotron-color:                inherit;
 @jumbotron-bg:                   @gray-lighter;
 @jumbotron-heading-color:        inherit;
-@jumbotron-font-size:            ceil((@font-size-base * 1.5));
-@jumbotron-heading-font-size:    ceil((@font-size-base * 4.5));
+@jumbotron-font-size:            (((@font-size-base * 1.5)*10)/10);
+@jumbotron-heading-font-size:    (((@font-size-base * 4.5)*10)/10);
 
 
 //== Form states and alerts
@@ -518,7 +518,7 @@
 //##
 
 //** Tooltip max width
-@tooltip-max-width:           200px;
+@tooltip-max-width:           60em;
 //** Tooltip text color
 @tooltip-color:               #fff;
 //** Tooltip background color
@@ -538,7 +538,7 @@
 //** Popover body background color
 @popover-bg:                          #fff;
 //** Popover maximum width
-@popover-max-width:                   276px;
+@popover-max-width:                   40em;
 //** Popover border color
 @popover-border-color:                rgba(0,0,0,.2);
 //** Popover fallback border color
@@ -548,7 +548,7 @@
 @popover-title-bg:                    darken(@popover-bg, 3%);
 
 //** Popover arrow width
-@popover-arrow-width:                 10px;
+@popover-arrow-width:                 0.8rem;
 //** Popover arrow color
 @popover-arrow-color:                 @popover-bg;
 
@@ -588,10 +588,10 @@
 //##
 
 //** Padding applied to the modal body
-@modal-inner-padding:         15px;
+@modal-inner-padding:         1rem;
 
 //** Padding applied to the modal title
-@modal-title-padding:         15px;
+@modal-title-padding:         1rem;
 //** Modal title line-height
 @modal-title-line-height:     @line-height-base;
 
@@ -611,16 +611,16 @@
 //** Modal footer border color
 @modal-footer-border-color:   @modal-header-border-color;
 
-@modal-lg:                    900px;
-@modal-md:                    600px;
-@modal-sm:                    300px;
+@modal-lg:                    60em;
+@modal-md:                    40em;
+@modal-sm:                    20rem;
 
 
 //== Alerts
 //
 //## Define alert colors, border radius, and padding.
 
-@alert-padding:               15px;
+@alert-padding:               1em;
 @alert-border-radius:         @border-radius-base;
 @alert-link-font-weight:      bold;
 
@@ -703,8 +703,8 @@
 //##
 
 @panel-bg:                    #fff;
-@panel-body-padding:          15px;
-@panel-heading-padding:       10px 15px;
+@panel-body-padding:          1rem;
+@panel-heading-padding:       0.8rem 1rem;
 @panel-footer-padding:        @panel-heading-padding;
 @panel-border-radius:         @border-radius-base;
 
@@ -742,7 +742,7 @@
 //##
 
 //** Padding around the thumbnail image
-@thumbnail-padding:           4px;
+@thumbnail-padding:           0.3rem;
 //** Thumbnail background color
 @thumbnail-bg:                @body-bg;
 //** Thumbnail border color
@@ -753,14 +753,14 @@
 //** Custom text color for thumbnail captions
 @thumbnail-caption-color:     @text-color;
 //** Padding around the thumbnail caption
-@thumbnail-caption-padding:   9px;
+@thumbnail-caption-padding:   0.8rem;
 
 
 //== Wells
 //
 //##
 
-@well-bg:                     #f5f5f5;
+@well-bg:                     #f8f8f8;
 @well-border:                 darken(@well-bg, 7%);
 
 
@@ -780,15 +780,15 @@
 
 @badge-font-weight:           bold;
 @badge-line-height:           1;
-@badge-border-radius:         10px;
+@badge-border-radius:         0.5rem;
 
 
 //== Breadcrumbs
 //
 //##
 
-@breadcrumb-padding-vertical:   8px;
-@breadcrumb-padding-horizontal: 15px;
+@breadcrumb-padding-vertical:   0.6rem;
+@breadcrumb-padding-horizontal: 1rem;
 //** Breadcrumb background color
 @breadcrumb-bg:                 #f5f5f5;
 //** Breadcrumb text color
@@ -838,7 +838,7 @@
 @pre-bg:                      #f5f5f5;
 @pre-color:                   @gray-dark;
 @pre-border-color:            #ccc;
-@pre-scrollable-max-height:   340px;
+@pre-scrollable-max-height:   8em;
 
 
 //== Type
@@ -846,7 +846,7 @@
 //##
 
 //** Horizontal offset for forms and lists.
-@component-offset-horizontal: 180px;
+@component-offset-horizontal: 10rem;
 //** Text muted color
 @text-muted:                  @gray-light;
 //** Abbreviations and acronyms border color
