@@ -2330,7 +2330,7 @@ legend {
 label {
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 0.3rem;
   font-weight: bold;
 }
 input[type="search"] {
@@ -2790,11 +2790,11 @@ select[multiple].input-lg {
 .form-horizontal .checkbox-inline {
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 1.42rem;
+  padding-top: 0.42rem;
 }
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 2.92rem;
+  min-height: 1.92rem;
 }
 .form-horizontal .form-group {
   margin-left: -0.75rem;
@@ -2804,7 +2804,7 @@ select[multiple].input-lg {
   .form-horizontal .control-label {
     text-align: right;
     margin-bottom: 0;
-    padding-top: 1.42rem;
+    padding-top: 0.42rem;
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {

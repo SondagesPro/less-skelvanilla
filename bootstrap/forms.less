@@ -32,7 +32,7 @@ legend {
 label {
   display: inline-block;
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
-  margin-bottom: 5px;
+  margin-bottom: 0.3rem;
   font-weight: bold;
 }
 
@@ -558,13 +558,13 @@ input[type="checkbox"] {
   .checkbox-inline {
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: (@padding-base-vertical + 1); // Default padding plus a border
+    padding-top: (@padding-base-vertical); // Default padding plus a border
   }
   // Account for padding we're adding to ensure the alignment and of help text
   // and other content below items
   .radio,
   .checkbox {
-    min-height: (@line-height-computed + (@padding-base-vertical + 1));
+    min-height: (@line-height-computed + (@padding-base-vertical));
   }
 
   // Make form groups behave like rows
@@ -578,7 +578,7 @@ input[type="checkbox"] {
     .control-label {
       text-align: right;
       margin-bottom: 0;
-      padding-top: (@padding-base-vertical + 1); // Default padding plus a border
+      padding-top: (@padding-base-vertical); // Default padding plus a border
     }
   }
 
