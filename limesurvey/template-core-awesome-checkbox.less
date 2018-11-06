@@ -1,0 +1,25 @@
+.checkbox-item label.ls-label-xs-visibility::after {
+    line-height:17px;width:17px;text-align:center;text-indent: 0;
+}
+/* show partially sr-only inside table */
+.radio-item .ls-label-xs-visibility,.checkbox-item .ls-label-xs-visibility{
+    display:inline-block;
+    position:relative;
+    overflow:hidden;
+    width: 17px;
+    height: 17px;
+    line-height: 21px;
+    text-indent: 21px;
+}
+.dir-ltr .ls-answers td.radio-item,.dir-ltr .ls-answers td.checkbox-item{padding-left: 20px;padding-right: 0;}
+.dir-rtl .ls-answers td.radio-item,.dir-rtl .ls-answers td.checkbox-item{padding-right: 20px;padding-left: 0;}
+
+.dir-ltr .radio-item .ls-label-xs-visibility,.dir-ltr .checkbox-item .ls-label-xs-visibility{left:auto;margin-left:-20px;}
+.dir-rtl .radio-item .ls-label-xs-visibility,.dir-rtl .checkbox-item .ls-label-xs-visibility{right:auto;margin-right:-20px;}
+.radio-item,.checkbox-item {position: relative;}
+.radio-item input[type="radio"],.checkbox-item input[type="checkbox"] {/*give near same position to real button (except in td : can fix but not needed )*/
+    display: inline-block;
+    height: 17px;
+    position: absolute;
+    width: 17px;
+}
