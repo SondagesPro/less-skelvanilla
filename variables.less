@@ -487,19 +487,19 @@
 //== Form states and alerts
 //
 @state-success-text:             @brand-success;
-@state-success-bg:               desaturate(lighten(@brand-success,60%),5%);
+@state-success-bg:               desaturate(lighten(@brand-success,55%),10%);
 @state-success-border:           lighten(spin(@state-success-text, -10), 5%);
 
 @state-info-text:                @brand-info;
-@state-info-bg:                  desaturate(lighten(@brand-info,60%),5%);
+@state-info-bg:                  desaturate(lighten(@brand-info,55%),10%);
 @state-info-border:              lighten(spin(@state-info-text, -10), 7%);
 
 @state-warning-text:             @brand-warning;
-@state-warning-bg:               desaturate(lighten(@brand-warning,60%),5%);
+@state-warning-bg:               desaturate(lighten(@brand-warning,55%),10%);
 @state-warning-border:           lighten(spin(@state-warning-text, -10), 5%);
 
 @state-danger-text:              @brand-danger;
-@state-danger-bg:                lighten(@brand-danger,60%);
+@state-danger-bg:                desaturate(lighten(@brand-danger,55%),1%);
 @state-danger-border:            lighten(spin(@state-danger-text, -10), 5%);
 
 
@@ -614,20 +614,20 @@
 @alert-border-radius:         @border-radius-base;
 @alert-link-font-weight:      bold;
 
-@alert-success-bg:            @state-success-bg;
-@alert-success-text:          @state-success-text;
+@alert-success-bg:            lighten(desaturate(@brand-success,30%),55%);
+@alert-success-text:          darken(@state-success-text,20%);
 @alert-success-border:        @state-success-border;
 
-@alert-info-bg:               @state-info-bg;
-@alert-info-text:             @state-info-text;
+@alert-info-bg:              lighten(desaturate(@brand-info,30%),55%);
+@alert-info-text:             darken(@state-info-text,20%);
 @alert-info-border:           @state-info-border;
 
-@alert-warning-bg:            @state-warning-bg;
-@alert-warning-text:          @state-warning-text;
+@alert-warning-bg:            lighten(desaturate(@brand-warning,30%),55%);
+@alert-warning-text:          darken(@state-warning-text,20%);
 @alert-warning-border:        @state-warning-border;
 
-@alert-danger-bg:             @state-danger-bg;
-@alert-danger-text:           @state-danger-text;
+@alert-danger-bg:             lighten(desaturate(@brand-danger,30%),55%);
+@alert-danger-text:           darken(@state-danger-text,20%);
 @alert-danger-border:         @state-danger-border;
 
 
