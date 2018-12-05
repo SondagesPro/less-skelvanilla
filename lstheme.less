@@ -5,14 +5,15 @@
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+//** Global font size `<html>`. Final size is set in font-size-base.
+@root-font-size:        100%;
 
 @bootstrap: "bootstrap";
 @limesurvey: "limesurvey";
 
 // Core variables and mixins
-@import "morevariables.less";
 @import "variables.less";
-@import "lsvariables.less";
+@import "morevariables.less";
 
 @import "@{limesurvey}/mixins.less";
 
@@ -36,7 +37,7 @@
 @import "@{bootstrap}/button-groups.less";
 @import "@{bootstrap}/input-groups.less";
 @import "@{bootstrap}/navs.less";
-@import "@{bootstrap}/navbar.less";
+@import "@{limesurvey}/navbar.less";
 @import "@{bootstrap}/breadcrumbs.less";
 @import "@{bootstrap}/pagination.less";
 @import "@{bootstrap}/pager.less";
