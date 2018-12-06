@@ -1,0 +1,101 @@
+/* radio list and checkbox list with border : WIP */
+/* Todo : mixin this */
+li.radio-item input[type="radio"], li.checkbox-item input[type="checkbox"],
+div.radio-item input[type="radio"], div.checkbox-item input[type="checkbox"] {top:50%;margin-top:-0.5em;}
+
+.radio-list li.radio-item ,.checkbox-list li.checkbox-item{margin:0}
+.dir-ltr li.radio-item input[type="radio"],.dir-ltr li.checkbox-item input[type="checkbox"] {left: @padding-large-horizontal/2;}
+.dir-rtl li.radio-item input[type="radio"],.dir-rtl li.checkbox-item input[type="checkbox"] {right: @padding-large-horizontal/2;}
+.radio-list li.radio-item label , .checkbox-list li.checkbox-item label {
+    border: @ls-radiocheckox-borderwidth solid @ls-radiocheckox-border;
+    cursor:pointer;
+    border-width: @ls-radiocheckox-borderwidth @ls-radiocheckox-borderwidth 0;
+    margin:0;
+}
+.radio-list .radio-item label ,.checkbox-list .checkbox-item label {
+  padding: @padding-large-vertical @padding-large-horizontal*2;
+}
+
+li.radio-item label , li.checkbox-item label,li.radio-text-item label {
+    min-height:@line-height-computed;
+}
+.radio-list li.radio-item:last-child label,.checkbox-list li.checkbox-item:last-child label{
+    border-bottom-width:@ls-radiocheckox-borderwidth;
+}
+
+.radio-list li.radio-text-item,.checkbox-list li.checkbox-text-item {
+    border:@ls-radiocheckox-borderwidth solid @ls-radiocheckox-border;
+    cursor:pointer;
+    border-width: @ls-radiocheckox-borderwidth @ls-radiocheckox-borderwidth 0;
+    margin:0;
+}
+.dir-ltr .radio-list  li.radio-text-item label,.dir-ltr .checkbox-list  li.checkbox-text-item label{padding-left:@padding-large-horizontal*2}
+.dir-ltr .radio-list  li.radio-text-item input[type="radio"],.dir-ltr .checkbox-list  li.checkbox-text-item input[type="checkbox"]{left:@padding-large-horizontal*2/3}
+.dir-rtl .radio-list  li.radio-text-item label,.dir-rtl .checkbox-list  li.checkbox-text-item label{padding-right:@padding-large-horizontal*2}
+.dir-rtl .radio-list  li.radio-text-item input[type="radio"],.dir-rtl .checkbox-list  li.checkbox-text-item input[type="checkbox"]{right:@padding-large-horizontal*2/3}
+.radio-list li.radio-text-item:last-child ,.checkbox-list li.checkbox-text-item:last-child {border-bottom-width:@ls-radiocheckox-borderwidth;}
+ul.form-inline li.radio-item label{border:@ls-radiocheckox-borderwidth solid @ls-radiocheckox-border;}
+
+/* Round border on list */
+.radio-list li:first-child label,.checkbox-list ul li:first-child label
+  {border-top-left-radius: @ls-radiocheckox-border-radius;border-top-right-radius: @ls-radiocheckox-border-radius;}
+.radio-list ul li:last-child label,.checkbox-list ul li:last-child label
+  { border-bottom-left-radius: @ls-radiocheckox-border-radius; border-bottom-right-radius: @ls-radiocheckox-border-radius;}
+.radio-list li.radio-text-item:last-child ,.checkbox-list li.checkbox-text-item:last-child
+  {border-bottom-left-radius: @ls-radiocheckox-border-radius; border-bottom-right-radius:@ls-radiocheckox-border-radius;}
+ul.form-inline li.radio-item label{border-radius: @ls-radiocheckox-border-radius;}
+
+/* coloring */
+li.radio-item label,li.checkbox-item label
+  {background-color: @ls-radiocheckox-bg;color:@ls-radiocheckox-color}
+.radio-list .radio-text-item,.checkbox-list .checkbox-text-item
+  {background-color: @ls-radiocheckox-bg;color:@ls-radiocheckox-color}
+li.radio-item.other-item label,li.checkbox-item.other-item label
+  {background-color: transparent;}
+/* checked */
+li.radio-item input[type="radio"]:checked + label,li.checkbox-item input[type="checkbox"]:checked + label
+  {background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
+li.radio-text-item input[type="radio"]:checked + label,li.radio-text-item input[type="checkbox"]:checked + label
+  {background:transparent;color:inherit;}
+li.radio-text-item.answer-checked,li.checkbox-text-item.answer-checked
+  {background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
+/* hover */
+li.radio-item label:hover,li.checkbox-item  input.checkbox + label:hover,
+li.radio-text-item input[type="radio"]:focus + label,li.radio-text-item input[type="checkbox"]:focus + label
+  {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
+.js li.radio-text-item:hover
+  {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
+.js li.radio-text-item:hover label
+  {color:@ls-radiocheckox-hover-color}
+/* no answer */
+li.no-anwser-item input[type="radio"]:checked + label
+  {background:transparent;color:inherit;}
+li.radio-item input[type="radio"][disabled] + label,li.checkbox-item input[type="radio"][disabled] + label
+{
+  background:transparent;
+  cursor:inherit;color:@gray-light;
+}
+
+.js table.ls-answers tbody tr td.radio-item:hover {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color;}
+.js table.ls-answers tbody tr td.radio-item.answer-checked{background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
+.js table.ls-answers tbody tr td.noanswer-item.answer-checked{background-color:transparent;color:inherit;}
+.js table.ls-answers tbody tr td.no-answer-item.answer-checked{background-color:transparent;color:inherit;}
+
+.js table.ls-answers tbody tr td.checkbox-item:hover {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color;}
+.js table.ls-answers tbody tr td.checkbox-item.answer-checked{background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
+@media
+only screen and (max-width: @screen-sm) {
+  .dir-ltr td.radio-item input[type="radio"],.dir-ltr td.checkbox-item input[type="checkbox"] {left: @padding-large-horizontal/2;margin-top:-0.5em;}
+  .dir-rtl td.radio-item input[type="radio"],.dir-rtl td.checkbox-item input[type="checkbox"] {right: @padding-large-horizontal/2;margin-top:-0.5em;}
+  .ls-answers > tbody > tr > td.radio-item , .ls-answers > tbody > tr > td.checkbox-item ,
+  .ls-answers > tbody > tr > td.radio-item , .ls-answers > tbody > tr > th.information-item{
+    border: @ls-radiocheckox-borderwidth solid @ls-radiocheckox-border;
+    border-width: @ls-radiocheckox-borderwidth 0 0;
+  }
+  .ls-answers > tbody > tr > td.radio-item label ,.ls-answers > tbody > tr >  td.checkbox-item label {
+    padding: @padding-large-vertical @padding-large-horizontal*2;
+  }
+  table.ls-answers tbody tr{border-radius:@ls-radiocheckox-border-radius;}
+  table.ls-answers {border:0 none}
+  td.radio-item input[type="radio"], td.checkbox-item input[type="checkbox"] {top:50%;margin-top:-0.5em;}
+}
