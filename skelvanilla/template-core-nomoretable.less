@@ -5,6 +5,7 @@ For iPads specifically : add this : (min-device-width: 768px) and (max-device-wi
 @media
 only screen and (max-width: @screen-sm) {
     table.ls-answers td {padding:@table-condensed-cell-padding;}
+    table.ls-answers td.radio-item,table.ls-answers td.checkbox-item {padding:0;}
     table.ls-answers,table.ls-answers thead,table.ls-answers tbody,table.ls-answers th,table.ls-answers td,table.ls-answers tr {display: block;}
     .dir-ltr table.ls-answers,.dir-ltr table.ls-answers thead,.dir-ltr table.ls-answers tbody,.dir-ltr table.ls-answers th,.dir-ltr table.ls-answers td,table.ls-answers tr {text-align:left;}
     .dir-rtl table.ls-answers,.dir-rtl table.ls-answers thead,.dir-rtl table.ls-answers tbody,.dir-rtl table.ls-answers th,.dir-rtl table.ls-answers td,table.ls-answers tr {text-align:right;}
@@ -57,4 +58,8 @@ only screen and (max-width: @screen-sm) {
     table.ls-answers > tbody > tr:hover {
         background-color: transparent;
     }
+
+    .othertext-label-checkox-container{margin-bottom:0}
+    .radio-list .radio-item.othertext-label-checkox-container label{padding-bottom:0}
+    .other-text-item{margin-bottom:0;padding:0 1em 0.5em}
 }

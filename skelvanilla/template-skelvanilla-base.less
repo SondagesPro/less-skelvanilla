@@ -13,14 +13,15 @@ tr.subquestion-list:hover .control-label,
 li.radio-item input[type="radio"], li.checkbox-item input[type="checkbox"],
 div.radio-item input[type="radio"], div.checkbox-item input[type="checkbox"] {margin-top:-0.6em;}
 .radio-list li.radio-item ,.checkbox-list li.checkbox-item{margin:0}
-.dir-ltr li.radio-item input[type="radio"],.dir-ltr li.checkbox-item input[type="checkbox"] {left: @padding-large-horizontal/2;}
-.dir-rtl li.radio-item input[type="radio"],.dir-rtl li.checkbox-item input[type="checkbox"] {right: @padding-large-horizontal/2;}
+.dir-ltr li.radio-item input[type="radio"],.dir-ltr li.checkbox-item input[type="checkbox"] {left: @ls-radiocheckoxpadding-horizontal*2/3;}
+.dir-rtl li.radio-item input[type="radio"],.dir-rtl li.checkbox-item input[type="checkbox"] {right: @ls-radiocheckoxpadding-horizontal*2/3;}
 .radio-list .radio-item label ,.checkbox-list .checkbox-item label {
   padding: @ls-radiocheckoxpadding-vertical @ls-radiocheckoxpadding-horizontal*2;
 }
-li.radio-item label , li.checkbox-item label,li.radio-text-item label {
-    min-height:@line-height-computed;
-}
+.checkbox-text-item .checkbox-item label{padding: @ls-radiocheckoxpadding-vertical @ls-radiocheckoxpadding-horizontal*2;}
+li.radio-item label , li.checkbox-item label,li.radio-text-item label {min-height:@line-height-computed;}
+.checkbox-text-item .checkbox-item label{min-height:@line-height-computed;}
+
 .dir-ltr .radio-list  li.radio-text-item label,.dir-ltr .checkbox-list  li.checkbox-text-item label{padding-left:@ls-radiocheckoxpadding-horizontal*2}
 .dir-ltr .radio-list  li.radio-text-item input[type="radio"],.dir-ltr .checkbox-list  li.checkbox-text-item input[type="checkbox"]{left:@ls-radiocheckoxpadding-horizontal*2/3}
 .dir-rtl .radio-list  li.radio-text-item label,.dir-rtl .checkbox-list  li.checkbox-text-item label{padding-right:@ls-radiocheckoxpadding-horizontal*2}

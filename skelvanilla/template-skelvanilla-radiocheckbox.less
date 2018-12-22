@@ -47,6 +47,10 @@ li.radio-text-item.answer-checked,li.checkbox-text-item.answer-checked
 /* hover */
 li.radio-item label:hover,li.checkbox-item label:hover,li.checkbox-item input[type="checkbox"]:checked + label:hover
   {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
+/* focus */
+//li.radio-text-item input[type="radio"]:focus + label,li.checkbox-text-item input[type="checkbox"]:focus + label
+//  {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
+
 .js li.radio-text-item:hover,.js .checkbox-list li.checkbox-text-item:hover
   {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
 .js li.radio-text-item:hover label,.js .checkbox-list li.checkbox-text-item:hover label
@@ -83,4 +87,6 @@ only screen and (max-width: @screen-sm) {
   }
   table.ls-answers tbody tr{border-radius:@ls-radiocheckox-border-radius;}
   table.ls-answers {border:0 none}
+  table.ls-answers td.radio-item,table.ls-answers td.checkbox-item {padding:0;}
+  table.ls-answers td.radio-item label,table.ls-answers td.checkbox-item label{margin-bottom: 0;}
 }
