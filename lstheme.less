@@ -10,6 +10,7 @@
 
 @bootstrap: "bootstrap";
 @limesurvey: "limesurvey";
+@skelvanilla: "skelvanilla";
 
 // Core variables and mixins
 @import "variables.less";
@@ -55,15 +56,13 @@
 @import "@{bootstrap}/close.less";
 
 // template-core replacement
-@import "@{limesurvey}/template-core-base.less";
-@import "@{limesurvey}/template-core-nomoretable.less";
-/*! Currently disable awesome-checkbox : hacking this make radio/checkbox less accessible */
-//@import "@{limesurvey}/template-core-awesome-checkbox.less";
-//@import "@{limesurvey}/template-core-nomoretable-awesome-checkbox.less";
+@import "@{skelvanilla}/template-core-base.less";
+@import "@{skelvanilla}/template-core-nomoretable.less";
 
 // for skelvanilla
-@import "@{limesurvey}/template-skelvanilla-base.less";
-@import "@{limesurvey}/template-skelvanilla-radiocheckbox.less";
+@import "@{skelvanilla}/template-skelvanilla-base.less";
+@import "@{skelvanilla}/template-skelvanilla-radiocheckbox.less";
+//@import "@{skelvanilla}/template-skelvanilla-awesome-checkbox.less";
 
 // Components w/ JavaScript
 @import "@{bootstrap}/modals.less";
