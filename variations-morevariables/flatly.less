@@ -1,0 +1,53 @@
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color background
+
+@btn-default-hover-color:        @btn-default-color;
+@btn-default-hover-bg:           darken(@btn-default-bg, 10%);
+@btn-default-hover-border:       darken(@btn-default-border, 12%);
+
+@btn-primary-hover-color:        @btn-primary-color;
+@btn-primary-hover-bg:           darken(@btn-primary-bg, 10%);
+@btn-primary-hover-border:       darken(@btn-primary-border, 12%);
+
+@btn-success-hover-color:        @btn-success-color;
+@btn-success-hover-bg:           darken(@btn-success-bg, 10%);
+@btn-success-hover-border:       darken(@btn-success-border, 12%);
+
+@btn-info-hover-color:           @btn-info-color;
+@btn-info-hover-bg:              darken(@btn-info-bg, 10%);
+@btn-info-hover-border:          darken(@btn-info-border, 12%);
+
+@btn-warning-hover-color:        @btn-warning-color;
+@btn-warning-hover-bg:           darken(@btn-warning-bg, 10%);
+@btn-warning-hover-border:       darken(@btn-warning-border, 12%);
+
+@btn-danger-hover-color:         @btn-danger-color;
+@btn-danger-hover-bg:            darken(@btn-danger-bg, 10%);
+@btn-danger-hover-border:        darken(@btn-danger-border, 12%);
+
+@ls-label-hover-color:                  @text-color;
+@ls-label-hover-shadow:                 rgba(red(@text-color), green(@text-color), blue(@text-color), 0.3);
+
+// Usage with template-skelvanilla-radiocheckbox
+@ls-radiocheckox-borderwidth:                 1px;
+@ls-radiocheckox-border:                @btn-default-border;
+@ls-radiocheckox-color:                 @text-color;
+@ls-radiocheckox-bg:                    @body-bg;
+@ls-radiocheckox-hover-color:           @btn-default-hover-color;
+@ls-radiocheckox-hover-bg:              @btn-default-hover-bg;
+@ls-radiocheckox-checked-color:         @btn-primary-color;
+@ls-radiocheckox-checked-bg:            @btn-primary-hover-bg;
+@ls-radiocheckox-border-radius:         @border-radius-base;
+
+@ls-radiocheckoxpadding-vertical:       @padding-large-vertical;
+@ls-radiocheckoxpadding-horizontal:     @padding-large-horizontal; // Usage *2 and /2
+
+// Usage with template-skelvanilla-awesome-checkbox
+@ls-radiocheckbox-awesome-size:                20px;
+@ls-radiocheckbox-awesome-innerpaddingsize:    4px;
+@ls-radiocheckbox-awesome-border:              mix(@text-color, @body-bg, 50%);
+@ls-radiocheckbox-awesome-color:               @body-bg;
+@ls-radio-awesome-checked-color:               @state-info-text;
+@ls-checkbox-awesome-checked-color:            @ls-radiocheckbox-awesome-color;
+@ls-checkbox-awesome-checked-bgcolor:          @ls-radio-awesome-checked-color;
