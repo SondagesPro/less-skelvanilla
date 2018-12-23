@@ -24,20 +24,16 @@ only screen and (max-width: @screen-sm) {
     table.ls-answers .information-item:empty{display:none}
 
     /* Show the label and fix the input*/
-    table.ls-answers .ls-label-xs-visibility
+    .ls-label-xs-visibility
     {
-        display:block;
+        display:initial;
         position:unset;
-        width: auto;
-        height: auto;
+        width: initial;
+        height: initial;
         overflow:initial;
     }
     td.radio-item,td.checkbox-item,td.radio-text-item,td.checkbox-text-item{margin-bottom:0;position:relative;}
     
-    td.radio-item input[type="radio"],td.checkbox-item input[type="checkbox"] {z-index:1;position:absolute;width:1em;height:1em;}
-    .dir-ltr td.radio-item input[type="radio"],.dir-ltr td.checkbox-item input[type="checkbox"] {left: 0.1em;top:50%;margin-top:-0.5em;}
-    .dir-rtl td.radio-item input[type="radio"],.dir-rtl td.checkbox-item input[type="checkbox"] {right: 0.1em;top:50%;margin-top:-0.5em;}
-
     table.ls-answers tbody .control-label{text-align:left}
     .dir-rtl table.ls-answers tbody .control-label{text-align:right}
     table.ls-answers .answertextright{text-align:right}

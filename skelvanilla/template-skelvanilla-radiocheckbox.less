@@ -38,14 +38,14 @@ li.radio-item label,li.checkbox-item label
 li.radio-item.other-item label,li.checkbox-item.other-item label
   {background-color: transparent;}
 /* checked */
-li.radio-item input[type="radio"]:checked + label,li.checkbox-item input[type="checkbox"]:checked + label
+.radio-item input[type="radio"]:checked + label,.checkbox-item input[type="checkbox"]:checked + label
   {background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
-li.radio-text-item input[type="radio"]:checked + label,li.checkbox-text-item input[type="checkbox"]:checked + label
+.radio-text-item input[type="radio"]:checked + label,.checkbox-text-item input[type="checkbox"]:checked + label
   {background:transparent;color:inherit;}
-li.radio-text-item.answer-checked,li.checkbox-text-item.answer-checked
+.radio-text-item.answer-checked,.checkbox-text-item.answer-checked
   {background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
 /* hover */
-li.radio-item label:hover,li.checkbox-item label:hover,li.checkbox-item input[type="checkbox"]:checked + label:hover
+.radio-item label:hover,.checkbox-item label:hover,.checkbox-item input[type="checkbox"]:checked + label:hover
   {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
 /* focus */
 //li.radio-text-item input[type="radio"]:focus + label,li.checkbox-text-item input[type="checkbox"]:focus + label
@@ -56,10 +56,10 @@ li.radio-item label:hover,li.checkbox-item label:hover,li.checkbox-item input[ty
 .js li.radio-text-item:hover label,.js .checkbox-list li.checkbox-text-item:hover label
   {color:@ls-radiocheckox-hover-color}
 /* no answer */
-li.no-anwser-item input[type="radio"]:checked + label,
-li.noanswer-item input[type="radio"]:checked + label
+.no-anwser-item input[type="radio"]:checked + label,
+.noanswer-item input[type="radio"]:checked + label
   {background:transparent;color:inherit;}
-li.radio-item input[type="radio"][disabled] + label,li.checkbox-item input[type="radio"][disabled] + label
+.radio-item input[type="radio"][disabled] + label,.checkbox-item input[type="radio"][disabled] + label
 {
   background:transparent;
   cursor:inherit;color:@gray-light;
