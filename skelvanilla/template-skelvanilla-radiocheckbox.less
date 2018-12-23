@@ -59,10 +59,13 @@ li.radio-item.other-item label,li.checkbox-item.other-item label
 .no-anwser-item input[type="radio"]:checked + label,
 .noanswer-item input[type="radio"]:checked + label
   {background:transparent;color:inherit;}
+li.no-anwser-item input[type="radio"]:checked + label,li.noanswer-item input[type="radio"]:checked + label
+  { background-color: @ls-radiocheckox-bg;color:@ls-radiocheckox-color}
+
 .radio-item input[type="radio"][disabled] + label,.checkbox-item input[type="radio"][disabled] + label
 {
   background:transparent;
-  cursor:inherit;color:@gray-light;
+  cursor:inherit;color:mix(@text-color, @body-bg, 50%);
 }
 /* ranking */
 .ls-choice{border-color: @ls-radiocheckox-border;}

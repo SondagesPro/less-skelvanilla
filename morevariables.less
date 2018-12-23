@@ -27,13 +27,13 @@
 @btn-danger-hover-border:        darken(@btn-danger-border, 12%);
 
 @ls-label-hover-color:                  @text-color;
-@ls-label-hover-shadow:                 rgba(red(@text-color), green(@text-color), blue(@text-color), 0.4);
+@ls-label-hover-shadow:                 rgba(red(@text-color), green(@text-color), blue(@text-color), 0.3);
 
-// Usage in template-skelvanilla-radiocheckbox.less
-@ls-radiocheckox-borderwidth:           1px;
+// Usage with template-skelvanilla-radiocheckbox
+@ls-radiocheckox-borderwidth:                 1px;
 @ls-radiocheckox-border:                @btn-default-border;
-@ls-radiocheckox-color:                 @btn-default-color;
-@ls-radiocheckox-bg:                    @btn-default-bg;
+@ls-radiocheckox-color:                 @text-color;
+@ls-radiocheckox-bg:                    @body-bg;
 @ls-radiocheckox-hover-color:           @btn-default-hover-color;
 @ls-radiocheckox-hover-bg:              @btn-default-hover-bg;
 @ls-radiocheckox-checked-color:         @btn-primary-color;
@@ -43,8 +43,7 @@
 @ls-radiocheckoxpadding-vertical:       @padding-large-vertical;
 @ls-radiocheckoxpadding-horizontal:     @padding-large-horizontal; // Usage *2 and /2
 
-// Usage in template-skelvanilla-awesome-checkbox.less
-// Using rem or em disable way to set inner at middle, usage of /2 : remind : floor
+// Usage with template-skelvanilla-awesome-checkbox
 @ls-radiocheckbox-awesome-size:                20px;
 @ls-radiocheckbox-awesome-innerpaddingsize:    4px;
 @ls-radiocheckbox-awesome-border:              mix(@text-color, @body-bg, 50%);

@@ -6067,7 +6067,7 @@ For iPads specifically : add this : (min-device-width: 768px) and (max-device-wi
 tr.subquestion-list:hover .control-label,
 .ls-choice:hover {
   color: #222222;
-  text-shadow: 0.1rem 0.1rem 0.2rem rgba(34, 34, 34, 0.4);
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(34, 34, 34, 0.3);
 }
 .checkbox-text-item .input-sm,
 .radio-text-item .input-sm {
@@ -6225,12 +6225,12 @@ ul.form-inline li.radio-item label {
 li.radio-item label,
 li.checkbox-item label {
   background-color: #fff;
-  color: #333;
+  color: #222222;
 }
 .radio-list .radio-text-item,
 .checkbox-list .checkbox-text-item {
   background-color: #fff;
-  color: #333;
+  color: #222222;
 }
 li.radio-item.other-item label,
 li.checkbox-item.other-item label {
@@ -6275,11 +6275,16 @@ li.checkbox-item.other-item label {
   background: transparent;
   color: inherit;
 }
+li.no-anwser-item input[type="radio"]:checked + label,
+li.noanswer-item input[type="radio"]:checked + label {
+  background-color: #fff;
+  color: #222222;
+}
 .radio-item input[type="radio"][disabled] + label,
 .checkbox-item input[type="radio"][disabled] + label {
   background: transparent;
   cursor: inherit;
-  color: #777777;
+  color: #919191;
 }
 /* ranking */
 .ls-choice {
