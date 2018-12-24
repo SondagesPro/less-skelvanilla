@@ -29,6 +29,9 @@
 @ls-label-hover-color:                  @text-color;
 @ls-label-hover-shadow:                 rgba(red(@text-color), green(@text-color), blue(@text-color), 0.3);
 
+// Usage on all table (not only array by column) @table-bg-hover; for example
+@ls-hover-column-bg:                    transparent;
+
 // Usage with template-skelvanilla-radiocheckbox
 @ls-radiocheckox-borderwidth:                 1px;
 @ls-radiocheckox-border:                @btn-default-border;
@@ -46,8 +49,8 @@
 // Usage with template-skelvanilla-awesome-checkbox
 @ls-radiocheckbox-awesome-size:                20px;
 @ls-radiocheckbox-awesome-innerpaddingsize:    4px;
-@ls-radiocheckbox-awesome-border:              mix(@text-color, @body-bg, 50%);
-@ls-radiocheckbox-awesome-color:               @body-bg;
-@ls-radio-awesome-checked-color:               @brand-info;
+@ls-radiocheckbox-awesome-border:              @input-border;
+@ls-radiocheckbox-awesome-color:               @input-bg;
+@ls-radio-awesome-checked-color:               @input-color;
 @ls-checkbox-awesome-checked-color:            @ls-radiocheckbox-awesome-color;
 @ls-checkbox-awesome-checked-bgcolor:          @ls-radio-awesome-checked-color;

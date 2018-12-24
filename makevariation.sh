@@ -7,10 +7,15 @@ do
     cat ${variable} > variables.less
     variation=${variable##*/}
     variation=${variation%.*}
-    cat variations-morevariables/contrast.less > morevariables.less
-    if [ -r variations-morevariables/${variation}.less ];
+    cat skelvanilla-default/variables-skelvanilla.less > variables-skelvanilla.less
+    cat skelvanilla-default/variables-bootswatch.less > variables-bootswatch.less
+    if [ -r variations-skelvanilla/${variation}.less ];
     then
-        cat variations-morevariables/${variation}.less > morevariables.less
+        cat variations-skelvanilla/${variation}.less > variables-skelvanilla.less
+    fi
+    if [ -r variations-bootswatch/${variation}.less ];
+    then
+        cat variations-bootswatch/${variation}.less > variables-bootswatch.less
     fi
     for theme in "${themes[@]}"
     do
@@ -23,7 +28,8 @@ do
 done
 # reset to default
 cat variations-variables/contrast.less > variables.less
-cat variations-morevariables/contrast.less > morevariables.less
+cat skelvanilla-default/variables-skelvanilla.less > variables-skelvanilla.less
+cat skelvanilla-default/variables-bootswatch.less > variables-bootswatch.less
 lessc --source-map --source-map-rootpath=https://gitlab.com/SondagesPro/SurveyThemes/less-limesurvey/raw/master/ theme-button.less lsbootstrap.css
 
 echo "All variations done, you can use at variations with skelvanilla"

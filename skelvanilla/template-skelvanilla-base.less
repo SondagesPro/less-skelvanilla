@@ -1,6 +1,8 @@
 .answer-item label:hover, .answer-item input:focus + label,
-tr.subquestion-list:hover .control-label,
-.ls-choice:hover{
+tr.answers-list:hover .control-label,
+tr.answers-list:hover .answertext,
+.ls-choice:hover,
+th.col-hover{
     color: @ls-label-hover-color;
     text-shadow: 0.1rem 0.1rem 0.2rem @ls-label-hover-shadow;
 }
@@ -40,5 +42,14 @@ only screen and (min-width: @screen-sm) {
   }
   .dir-rtl td.radio-item input[type="radio"],.dir-rtl td.checkbox-item input[type="checkbox"] {
     left:50%;margin-left:-@ls-radiocheckoxpadding-horizontal/2;
+  }
+  .table-col-hover col.hover{
+    background-color: @table-bg-hover;
+  }
+  .table-col-hover tr.answers-list:hover{
+    background-color: @ls-hover-column-bg;
+  }
+  .table-hover col.hover{
+    background-color: @ls-hover-column-bg;
   }
 }

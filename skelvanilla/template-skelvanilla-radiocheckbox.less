@@ -10,7 +10,6 @@
 .radio-list li.radio-item:last-child label,.checkbox-list li.checkbox-item:last-child label{
     border-bottom-width:@ls-radiocheckox-borderwidth;
 }
-
 .radio-list li.radio-text-item,.checkbox-list li.checkbox-text-item {
     border:@ls-radiocheckox-borderwidth solid @ls-radiocheckox-border;
     cursor:pointer;
@@ -81,6 +80,13 @@ li.no-anwser-item input[type="radio"]:checked + label,li.noanswer-item input[typ
 
 .js table.ls-answers tbody tr td.checkbox-item:hover {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color;}
 .js table.ls-answers tbody tr td.checkbox-item.answer-checked{background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
+
+.checkbox-item label.ls-label-xs-visibility, .radio-item label.ls-label-xs-visibility,
+.checkbox-item input[type="checkbox"]:checked + label.ls-label-xs-visibility, .radio-item input[type="radio"]:checked + label.ls-label-xs-visibility,
+.checkbox-item input[type="checkbox"] + label.ls-label-xs-visibility, .radio-item input[type="radio"]:checked + label.ls-label-xs-visibility{
+  background: transparent;
+  color: initial;
+}
 @media
 only screen and (max-width: @screen-sm) {
   .ls-answers > tbody > tr > td.radio-item , .ls-answers > tbody > tr > td.checkbox-item ,
@@ -92,4 +98,13 @@ only screen and (max-width: @screen-sm) {
   table.ls-answers {border:0 none}
   table.ls-answers td.radio-item,table.ls-answers td.checkbox-item {padding:0;}
   table.ls-answers td.radio-item label,table.ls-answers td.checkbox-item label{margin-bottom: 0;}
+  li.radio-item label.ls-label-xs-visibility,li.checkbox-item label.ls-label-xs-visibility
+  { background-color: @ls-radiocheckox-bg;color:@ls-radiocheckox-color}
+  .radio-item input[type="radio"]:checked + label.ls-label-xs-visibility,.checkbox-item input[type="checkbox"]:checked + label.ls-label-xs-visibility
+    {background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
+  .radio-item label.ls-label-xs-visibility:hover,.checkbox-item label.ls-label-xs-visibility:hover
+    {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
+  .no-anwser-item input[type="radio"]:checked + label.ls-label-xs-visibility,
+  .noanswer-item input[type="radio"]:checked + label.ls-label-xs-visibility
+    {background:transparent;color:inherit;}
 }
