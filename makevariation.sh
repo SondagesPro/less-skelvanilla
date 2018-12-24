@@ -27,7 +27,7 @@ do
     echo "variations ${variation} done";
 done
 # reset to default
-cat variations-variables/contrast.less > variables.less
+cat skelvanilla-default/variables.less > variables.less
 cat skelvanilla-default/variables-skelvanilla.less > variables-skelvanilla.less
 cat skelvanilla-default/variables-bootswatch.less > variables-bootswatch.less
 lessc --source-map --source-map-rootpath=https://gitlab.com/SondagesPro/SurveyThemes/less-limesurvey/raw/master/ theme-button.less lsbootstrap.css

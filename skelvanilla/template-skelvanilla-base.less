@@ -11,7 +11,7 @@ th.col-hover{
   .input-size(@input-height-base; @padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @input-border-radius-small);
 }
 
-.radio-item input[type="radio"],.checkbox-item input[type="checkbox"] {width:@ls-radiocheckoxpadding-horizontal;height:@ls-radiocheckoxpadding-horizontal;margin:0}
+.radio-item input[type="radio"],.checkbox-item input[type="checkbox"] {width:auto;height:auto;margin:0;display:inline-block}
 .radio-item input[type="radio"],.checkbox-item input[type="checkbox"] {top:50%;}
 .radio-item input[type="radio"], .checkbox-item input[type="checkbox"] {margin-top:-@font-size-base*0.6;}
 .radio-list .radio-item ,.checkbox-list .checkbox-item,.answers-list .radio-item {margin:0}
@@ -33,15 +33,17 @@ th.col-hover{
 @media
 only screen and (min-width: @screen-sm) {
   td.radio-item input[type="radio"], td.checkbox-item input[type="checkbox"] {
-    position:absolute;
-    top:50%;
-    margin-top:-@ls-radiocheckoxpadding-horizontal/2;
+    position:relative;
+    top:auto;
+    margin:0.5em 0;
+    display:inline-block;
+    width:auto;height:auto;
   }
   .dir-ltr td.radio-item input[type="radio"],.dir-ltr td.checkbox-item input[type="checkbox"] {
-    left:50%;margin-left:-@ls-radiocheckoxpadding-horizontal/2;
+    left:auto;
   }
   .dir-rtl td.radio-item input[type="radio"],.dir-rtl td.checkbox-item input[type="checkbox"] {
-    left:50%;margin-left:-@ls-radiocheckoxpadding-horizontal/2;
+    right:auto;
   }
   .table-col-hover col.hover{
     background-color: @table-bg-hover;
