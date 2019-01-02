@@ -10,8 +10,12 @@ th.col-hover{
   // Fix height of other input
   .input-size(@input-height-base; @padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @input-border-radius-small);
 }
+/* Input radio checkbox position */
 
-.radio-item input[type="radio"],.checkbox-item input[type="checkbox"] {width:auto;height:auto;margin:0;display:inline-block}
+.answer-item ,.radio-item ,.checkbox-item {position:relative}
+.radio-item label,.checkbox-item label {display:block}
+.radio-item input[type="radio"],.checkbox-item input[type="checkbox"] {z-index:1;position:absolute;}
+.radio-item input[type="radio"],.checkbox-item input[type="checkbox"] {margin:0;display:inline-block}
 .radio-item input[type="radio"],.checkbox-item input[type="checkbox"] {top:50%;}
 .radio-item input[type="radio"], .checkbox-item input[type="checkbox"] {margin-top:-@font-size-base*0.6;}
 .radio-list .radio-item ,.checkbox-list .checkbox-item,.answers-list .radio-item {margin:0}
@@ -19,8 +23,8 @@ th.col-hover{
 .dir-rtl .radio-item input[type="radio"],.dir-rtl .checkbox-item input[type="checkbox"] {right: @ls-radiocheckoxpadding-horizontal*2/3;}
 
 .radio-list .radio-item label ,.checkbox-list .checkbox-item label,.answers-list .radio-item label {padding: @ls-radiocheckoxpadding-vertical @ls-radiocheckoxpadding-horizontal;}
-.dir-ltr .radio-list .radio-item label ,.dir-ltr .checkbox-list .checkbox-item label,.dir-ltr .answers-list .radio-item label  {padding-left:@ls-radiocheckoxpadding-horizontal*2}
-.dir-rtl .radio-list .radio-item label ,.dir-rtl .checkbox-list .checkbox-item label,.dir-rtl .answers-list .radio-item label  {padding-right:@ls-radiocheckoxpadding-horizontal*2}
+.dir-ltr .radio-list .radio-item label ,.dir-ltr .checkbox-list .checkbox-item label,.dir-ltr .answers-list .radio-item label {padding-left:@ls-radiocheckoxpadding-horizontal*2}
+.dir-rtl .radio-list .radio-item label ,.dir-rtl .checkbox-list .checkbox-item label,.dir-rtl .answers-list .radio-item label {padding-right:@ls-radiocheckoxpadding-horizontal*2}
 
 .checkbox-text-item .checkbox-item label{padding: @ls-radiocheckoxpadding-vertical @ls-radiocheckoxpadding-horizontal*2;}
 .radio-item label , .checkbox-item label,.radio-text-item label {min-height:@line-height-computed;}
@@ -30,28 +34,46 @@ th.col-hover{
 .dir-ltr .radio-list  .radio-text-item input[type="radio"],.dir-ltr .checkbox-list  .checkbox-text-item input[type="checkbox"]{left:@ls-radiocheckoxpadding-horizontal*2/3}
 .dir-rtl .radio-list  .radio-text-item label,.dir-rtl .checkbox-list  .checkbox-text-item label{padding-right:@ls-radiocheckoxpadding-horizontal*2}
 .dir-rtl .radio-list  .radio-text-item input[type="radio"],.dir-rtl .checkbox-list  .checkbox-text-item input[type="checkbox"]{right:@ls-radiocheckoxpadding-horizontal*2/3}
+
+/* Inside table */
+td.radio-item input[type="radio"], td.checkbox-item input[type="checkbox"] {
+  position:relative;
+  top:auto;
+  margin:0.5em 0;
+  }
+.dir-ltr td.radio-item input[type="radio"],.dir-ltr td.checkbox-item input[type="checkbox"] {
+  left:auto;
+}
+.dir-rtl td.radio-item input[type="radio"],.dir-rtl td.checkbox-item input[type="checkbox"] {
+  right:auto;
+}
+
+/* Hover column */
+.table-col-hover col.hover{
+  background: @table-bg-hover;
+}
+.table-col-hover tr.answers-list:hover{
+  background: @ls-hover-column-bg;
+}
+.table-hover col.hover{
+  background: @ls-hover-column-bg;
+}
 @media
-only screen and (min-width: @screen-sm) {
+only screen and (max-width: @screen-sm) {
   td.radio-item input[type="radio"], td.checkbox-item input[type="checkbox"] {
-    position:relative;
-    top:auto;
-    margin:0.5em 0;
-    display:inline-block;
-    width:auto;height:auto;
-  }
-  .dir-ltr td.radio-item input[type="radio"],.dir-ltr td.checkbox-item input[type="checkbox"] {
-    left:auto;
-  }
-  .dir-rtl td.radio-item input[type="radio"],.dir-rtl td.checkbox-item input[type="checkbox"] {
-    right:auto;
+    position:absolute;
+    top:50%;
+    margin:0;margin-top:-@font-size-base*0.6;
   }
   .table-col-hover col.hover{
-    background-color: @table-bg-hover;
+    background: transparent;
   }
   .table-col-hover tr.answers-list:hover{
-    background-color: @ls-hover-column-bg;
+    background: transparent;
   }
   .table-hover col.hover{
-    background-color: @ls-hover-column-bg;
+    background: transparent;
   }
+  .dir-ltr td.radio-item input[type="radio"],.dir-ltr td.checkbox-item input[type="checkbox"] {left: @ls-radiocheckoxpadding-horizontal*2/3;}
+  .dir-rtl td.radio-item input[type="radio"],.dir-rtl td.checkbox-item input[type="checkbox"] {right: @ls-radiocheckoxpadding-horizontal*2/3;}
 }
