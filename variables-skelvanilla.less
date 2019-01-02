@@ -48,9 +48,11 @@
 
 // Usage with template-skelvanilla-awesome-checkbox
 @ls-radiocheckbox-awesome-size:                20px;
-@ls-radiocheckbox-awesome-innerpaddingsize:    4px;
+@ls-radiocheckbox-awesome-innerpaddingsize:    4px; // padding for radio, font size for checkbox (with current way)
 @ls-radiocheckbox-awesome-border:              @input-border;
-@ls-radiocheckbox-awesome-color:               @input-bg;
-@ls-radio-awesome-checked-color:               @input-color;
-@ls-checkbox-awesome-checked-color:            @ls-radiocheckbox-awesome-color;
-@ls-checkbox-awesome-checked-bgcolor:          @ls-radio-awesome-checked-color;
+@ls-radiocheckbox-awesome-bgcolor:             @input-bg;
+@ls-radiocheckbox-awesome-checked-bgcolor:     @btn-info-bg;
+@ls-radiocheckbox-awesome-checked-color:       @ls-radiocheckbox-awesome-bgcolor;
+// Only for checkbox
+@ls-checkbox-awesome-checked-bgcolor:          @ls-radiocheckbox-awesome-checked-bgcolor;
+@ls-checkbox-awesome-checked-color:            @ls-radiocheckbox-awesome-checked-color;

@@ -12,44 +12,30 @@
   padding-right: @ls-radiocheckbox-awesome-size;padding-left: @ls-radiocheckbox-awesome-size;
 }
 .dir-ltr .answers-list .radio-item label,.dir-ltr .answers-list .checkbox-item label {
-  padding-left: @ls-radiocheckbox-awesome-size*2;
-}
-.dir-rtl .answers-list .radio-item label,.dir-rtl .answers-list .checkbox-item label {
-  padding-right: @ls-radiocheckbox-awesome-size*2;
+  padding-left: @ls-radiocheckbox-awesome-size*3/2;
 }
 .dir-ltr .radio-item input[type="radio"],.dir-ltr .checkbox-item input[type="radio"] {
-  left: @ls-radiocheckbox-awesome-size/2;
+  left: @ls-radiocheckbox-awesome-size/4;
 }
-.dir-rtl .radio-item input[type="radio"],.dir-rtl .checkbox-item input[type="radio"] {
-  right: @ls-radiocheckbox-awesome-size/2;
-}
+
 .radio-item label::before,.checkbox-item label::before {
   content: " ";
   display: block;
   position: absolute;
   width: @ls-radiocheckbox-awesome-size;
   height: @ls-radiocheckbox-awesome-size;
+  text-align:center;
   top: 50%;
   margin-top : -@ls-radiocheckbox-awesome-size/2;
   border:1px solid @ls-radiocheckbox-awesome-border;
-  background-color: @ls-radiocheckbox-awesome-bgcolor;
+  background: @ls-radiocheckbox-awesome-bgcolor;
   z-index:3;
   box-sizing: border-box;
-}
-.radio-item input[type="radio"]:focus + label::before ,.checkbox-item input[type="checkbox"]:focus + label::before{
-    box-shadow: 0 0 @ls-radiocheckbox-awesome-size/4 1px @input-border-focus;border-color:@input-border-focus;
-}
-.radio-item label::after,.checkbox-item label::after {
-  display: block;
-  position: absolute;
-  width: (@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
-  height: (@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
-  top: 50%;
-  margin-top : -(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2)/2;
-  z-index:3;
-  box-sizing: border-box;
-  visibility: hidden;
-  opacity:0;
+  color:@ls-radiocheckbox-awesome-checked-color;
+  font-family: "FontAwesome";
+  font-size:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
+  line-height:@ls-radiocheckbox-awesome-size;
+  text-indent:0;
 }
 .radio-item label::before,.radio-item label::after {
   border-radius: 50%;
@@ -57,37 +43,25 @@
 .checkbox-item label::before,.checkbox-item label::after {
   border-radius: @input-border-radius-small;
 }
-.radio-item label::after {
-  content: " ";
-  background: @ls-radiocheckbox-awesome-checked-bgcolor;
+.radio-item input[type="radio"]:focus + label::before ,.checkbox-item input[type="checkbox"]:focus + label::before{
+    box-shadow: 0 0 @ls-radiocheckbox-awesome-size/4 1px @input-border-focus;border-color:@input-border-focus;
 }
-.checkbox-item label::after {
-  background: @ls-radiocheckbox-awesome-checked-bgcolor;
-  color:@ls-radiocheckbox-awesome-checked-color;
-  font-family: "FontAwesome";
-  content: "\f00c";
-  font-size:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
-  line-height:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
-  text-indent:0;
-}
+
+
 .dir-ltr .radio-item label::before,.dir-ltr .checkbox-item label::before {
-    left:0; margin-left: @ls-radiocheckbox-awesome-size/2;
+    left:0; margin-left: @ls-radiocheckbox-awesome-size/4;
 }
-.dir-ltr .radio-item label::after,.dir-ltr .checkbox-item label::after{
-    left: @ls-radiocheckbox-awesome-innerpaddingsize;margin-left: @ls-radiocheckbox-awesome-size/2;
-}
+
 .dir-rtl .radio-item label::before,.dir-rtl .checkbox-item label::before {
-    right:0; margin-right: @ls-radiocheckbox-awesome-size/2;
+    left:0; margin-left: @ls-radiocheckbox-awesome-size/4;
 }
-.dir-rtl .radio-item label::after,.dir-rtl .checkbox-item label::after{
-    right: @ls-radiocheckbox-awesome-innerpaddingsize;margin-right: @ls-radiocheckbox-awesome-size/2;
-}
-.radio-item input[type="radio"]:checked + label::after,.checkbox-item input[type="checkbox"]:checked + label::after {
-  visibility: visible;
-  opacity:1;
+.radio-item input[type="radio"]:checked + label::before {
+  background: @ls-radiocheckbox-awesome-checked-bgcolor;
+  content: "\f111";
 }
 .checkbox-item input[type="checkbox"]:checked + label::before {
   background: @ls-radiocheckbox-awesome-checked-bgcolor;
+  content: "\f00c";
 }
 /* for table only if bigger */
 @media
