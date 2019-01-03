@@ -104,6 +104,13 @@
     box-sizing: border-box;
     clip: unset;
 }
+.radio-item label.ls-label-xs-visibility::before,.checkbox-item label.ls-label-xs-visibility::before {
+  margin-top : -@ls-radiocheckbox-awesome-size*1/2;
+}
+.radio-item label.ls-label-xs-visibility::after,.checkbox-item label.ls-label-xs-visibility::after {
+  margin-top : -(@ls-radiocheckbox-awesome-size*1/2 - @ls-radiocheckbox-awesome-innerpaddingsize);
+}
+
 .dir-ltr td.radio-item label.ls-label-xs-visibility,.dir-ltr td.checkbox-item label.ls-label-xs-visibility {
   left:50%;margin-left:-@ls-radiocheckbox-awesome-size;
 }
@@ -138,6 +145,12 @@ only screen and (max-width: @screen-sm) {
       top: auto;
       margin-top : 0;
       clip: unset;
+  }
+  td.radio-item label.ls-label-xs-visibility::before,td.checkbox-item label.ls-label-xs-visibility::before {
+    margin-top : -@ls-radiocheckbox-awesome-size*2/3;
+  }
+  td.radio-item label.ls-label-xs-visibility::after,td.checkbox-item label.ls-label-xs-visibility::after {
+    margin-top : -(@ls-radiocheckbox-awesome-size*2/3 - @ls-radiocheckbox-awesome-innerpaddingsize);
   }
   .dir-ltr td.radio-item label.ls-label-xs-visibility,.dir-ltr td.checkbox-item label.ls-label-xs-visibility {
     padding-left: @ls-radiocheckbox-awesome-size*2;left:auto;
