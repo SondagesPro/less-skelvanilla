@@ -1,0 +1,17 @@
+
+# Never include config.php
+/application/config/config.php
+/application/config/config.*.php
+
+## Ignore any hidden folder/files (except explicitly defined)
+## such as various IDE folders .idea .netbeans .vscode
+## or development environment things like .vagrant etc
+.*
+!.gitignore
+!.gitattributes
+
+# Generated files
+/variations/*
+lsbootstrap.css
+lsbootstrap.css.map
+
