@@ -7,8 +7,13 @@ do
     cat ${variable} > variables.less
     variation=${variable##*/}
     variation=${variation%.*}
+    cat skelvanilla-default/variables-init.less > variables-init.less
     cat skelvanilla-default/variables-skelvanilla.less > variables-skelvanilla.less
     cat skelvanilla-default/variables-bootswatch.less > variables-bootswatch.less
+    if [ -r variations-init/${variation}.less ];
+    then
+        cat variations-init/${variation}.less > variables-init.less
+    fi
     if [ -r variations-skelvanilla/${variation}.less ];
     then
         cat variations-skelvanilla/${variation}.less > variables-skelvanilla.less
@@ -27,6 +32,7 @@ do
     echo "variations ${variation} done";
 done
 # reset to default
+cat skelvanilla-default/variables-init.less > variables-init.less
 cat skelvanilla-default/variables.less > variables.less
 cat skelvanilla-default/variables-skelvanilla.less > variables-skelvanilla.less
 cat skelvanilla-default/variables-bootswatch.less > variables-bootswatch.less
