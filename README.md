@@ -2,13 +2,18 @@
 
 Updated from boostrap
 
-- Current variables with more contrast
 - Allow usage of rem
 - Set current font-size to rem
+- Add more usage of current variable top make different variations
+- Some fix for limesurvey with bootsrap
+
+The default variables use only rem and more contrast
 
 ## Usage ##
+
+Update `variables.less` and optionnaly `variables-bootswatch.less`, `variables-init.less` and `variables-skelvanilla.less`.
 
 For [skelvanilla](https://gitlab.com/SondagesPro/SurveyThemes/skelvanilla)
 `lessc lessc lstheme.less > lsbootstrap.css`
 
-You can take any existing variables.less, `@root-font-size` is set directly inside lstheme.less.
+variations was done with boostwatch theme.
