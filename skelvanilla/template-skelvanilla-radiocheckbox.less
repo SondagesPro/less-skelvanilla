@@ -44,11 +44,12 @@ li.radio-item.other-item label,li.checkbox-item.other-item label
 .radio-text-item.answer-checked,.checkbox-text-item.answer-checked
   {background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
 /* hover */
-.radio-item label:hover,.checkbox-item label:hover,.checkbox-item input[type="checkbox"]:checked + label:hover
+.radio-item label:hover,.checkbox-item label:hover,.checkbox-item input[type="checkbox"]:checked + label:hover,
+.radio-item input[type="radio"]:focus + label,.checkbox-item input[type="checkbox"]:focus + label,.checkbox-item input[type="checkbox"]:checked:focus + label
   {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
 /* focus */
-//li.radio-text-item input[type="radio"]:focus + label,li.checkbox-text-item input[type="checkbox"]:focus + label
-//  {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
+li.radio-text-item input[type="radio"]:focus + label,li.checkbox-text-item input[type="checkbox"]:focus + label
+  {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
 
 .js li.radio-text-item:hover,.js .checkbox-list li.checkbox-text-item:hover
   {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
