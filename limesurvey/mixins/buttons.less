@@ -12,7 +12,9 @@
   &.focus {
     color: @hcolor;
     background-color: @hbackground;
-        border-color: darken(@hborder, 12%);
+        border-color: @hborder;
+        @shadow: 0 0 6px rgba(red(@hborder), green(@hborder), blue(@hborder), .6);
+        .box-shadow(@shadow);
   }
   &:hover {
     color: @hcolor;
@@ -33,6 +35,11 @@
       background-color: darken(@hbackground, 10%);
           border-color: darken(@hborder, 12%);
     }
+    &:focus,
+    &.focus {
+        @shadow: 0 0 6px rgba(red(@hborder), green(@hborder), blue(@hborder), .6);
+        .box-shadow(@shadow);
+    }
   }
   &:active,
   &.active,
@@ -47,6 +54,11 @@
     &.focus {
       background-color: @background;
           border-color: @border;
+    }
+    &:focus,
+    &.focus {
+        @shadow: 0 0 0 rgba(red(@hborder), green(@hborder), blue(@hborder), 0);
+        .box-shadow(@shadow);
     }
   }
   .badge {
