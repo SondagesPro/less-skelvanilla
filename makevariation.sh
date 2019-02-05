@@ -10,7 +10,7 @@ do
     cat skelvanilla-default/variables-init.less > variables-init.less
     cat skelvanilla-default/variables-skelvanilla.less > variables-skelvanilla.less
     cat skelvanilla-default/variables-bootswatch.less > variables-bootswatch.less
-    cat skelvanilla-default/variables-bootswatch.less > variables-slider.less
+    cat skelvanilla-default/variables-slider.less > variables-slider.less
     if [ -r variations-init/${variation}.less ];
     then
         cat variations-init/${variation}.less > variables-init.less
@@ -23,6 +23,10 @@ do
     then
         cat variations-bootswatch/${variation}.less > variables-bootswatch.less
     fi
+    if [ -r variations-slider/${variation}.less ];
+    then
+        cat variations-slider/${variation}.less > variables-slider.less
+    fi
     for theme in "${themes[@]}"
     do
         themename=${theme/theme/$variation}
@@ -33,11 +37,12 @@ do
     echo "variations ${variation} done";
 done
 # Make lsbootstrap.css with contrast button
-cat skelvanilla-default/variables-init.less > variables-init.less
-cat skelvanilla-default/variables.less > variables.less
-cat skelvanilla-default/variables-skelvanilla.less > variables-skelvanilla.less
+cat variations-init/contrast.less > variables-init.less
+cat variations-variables/contrast.less > variables.less
+cat variations-skelvanilla/contrast.less > variables-skelvanilla.less
 cat skelvanilla-default/variables-bootswatch.less > variables-bootswatch.less
 cat skelvanilla-default/variables-slider.less > variables-slider.less
+
 lessc --source-map --source-map-rootpath=https://gitlab.com/SondagesPro/SurveyThemes/less-limesurvey/raw/master/ theme-button.less lsbootstrap.css
 
 echo "All variations done, you can use at variations with skelvanilla"
