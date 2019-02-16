@@ -60,20 +60,9 @@ td.radio-item input[type="radio"], td.checkbox-item input[type="checkbox"] {
 }
 @media
 only screen and (max-width: @screen-sm) {
-  td.radio-item input[type="radio"], td.checkbox-item input[type="checkbox"] {
-    position:absolute;
-    top:50%;
-    margin:0;margin-top:-@font-size-base*0.6;
-  }
-  .table-col-hover col.hover{
-    background: transparent;
-  }
-  .table-col-hover tr.answers-list:hover{
-    background: transparent;
-  }
-  .table-hover col.hover{
-    background: transparent;
-  }
   .dir-ltr td.radio-item input[type="radio"],.dir-ltr td.checkbox-item input[type="checkbox"] {left: @ls-radiocheckoxpadding-horizontal*2/3;}
   .dir-rtl td.radio-item input[type="radio"],.dir-rtl td.checkbox-item input[type="checkbox"] {right: @ls-radiocheckoxpadding-horizontal*2/3;}
+  .othertext-label-checkox-container{margin-bottom:0}
+  .radio-list .radio-item.othertext-label-checkox-container label{padding-bottom:0}
+  .other-text-item{margin-bottom:0;padding:0 1em 0.5em}
 }

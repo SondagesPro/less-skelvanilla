@@ -159,3 +159,43 @@ only screen and (max-width: @screen-sm) {
     padding-right: @ls-radiocheckbox-awesome-size*2;right:auto;
   }
 }
+/* except for table-fixed wrapper */
+@media
+only screen and (max-width: @screen-sm) {
+  .table-fixed td.radio-item label.ls-label-xs-visibility,.table-fixed td.checkbox-item label.ls-label-xs-visibility{
+    display:block;
+    position:absolute;
+    overflow:hidden;
+    line-height: @ls-radiocheckbox-awesome-size*3;
+    text-indent: @ls-radiocheckbox-awesome-size*3;
+    padding:0;
+    top: 50%;
+    margin-top:-@ls-radiocheckbox-awesome-size*2/3;
+    box-sizing: border-box;
+    clip: unset;
+  }
+    .table-responsive table.ls-answers td.radio-item .ls-label-xs-visibility,.table-responsive table.ls-answers td.checkbox-item .ls-label-xs-visibility,
+    .table-fixed table.ls-answers td.radio-item .ls-label-xs-visibility,.table-fixed table.ls-answers td.checkbox-item .ls-label-xs-visibility
+    {
+        width: @ls-radiocheckbox-awesome-size*3/2;
+        height: @ls-radiocheckbox-awesome-size*3/2;
+    }
+  .table-fixed td.radio-item label.ls-label-xs-visibility::before,.table-fixed td.checkbox-item label.ls-label-xs-visibility::before {
+    margin-top : -@ls-radiocheckbox-awesome-size*1/2;
+  }
+  .table-fixed td.radio-item label.ls-label-xs-visibility::after,.table-fixed td.checkbox-item label.ls-label-xs-visibility::after {
+    margin-top : -(@ls-radiocheckbox-awesome-size*1/2 - @ls-radiocheckbox-awesome-innerpaddingsize);
+  }
+  .dir-ltr .table-fixed td.radio-item label.ls-label-xs-visibility,.dir-ltr .table-fixed td.checkbox-item label.ls-label-xs-visibility {
+    left:50%;margin-left:-@ls-radiocheckbox-awesome-size;
+  }
+  .dir-rtl .table-fixed td.radio-item label.ls-label-xs-visibility,.dir-rtl .table-fixed td.checkbox-item label.ls-label-xs-visibility {
+    right:50%;margin-right:-@ls-radiocheckbox-awesome-size;
+  }
+  .dir-ltr .table-fixed .answers-list .radio-item label,.dir-ltr .table-fixed .answers-list .checkbox-item label {
+    padding-left: @ls-radiocheckbox-awesome-size*2;
+  }
+  .dir-rtl .table-fixed .answers-list .radio-item label,.dir-rtl .table-fixed .answers-list .checkbox-item label {
+    padding-right: @ls-radiocheckbox-awesome-size*2;
+  }
+}

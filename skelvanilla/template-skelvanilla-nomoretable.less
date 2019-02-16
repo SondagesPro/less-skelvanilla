@@ -1,0 +1,128 @@
+/*
+Max width before this PARTICULAR table gets nasty
+For iPads specifically : add this : (min-device-width: 768px) and (max-device-width: 1024px)
+*/
+@media
+only screen and (max-width: @screen-sm) {
+    table.ls-answers td {padding:@table-condensed-cell-padding;}
+    table.ls-answers td.radio-item,table.ls-answers td.checkbox-item {padding:0;}
+    table.ls-answers,table.ls-answers thead,table.ls-answers tbody,table.ls-answers th,table.ls-answers td,table.ls-answers tr {display: block;}
+    .dir-ltr table.ls-answers,.dir-ltr table.ls-answers thead,.dir-ltr table.ls-answers tbody,.dir-ltr table.ls-answers th,.dir-ltr table.ls-answers td,table.ls-answers tr {text-align:left;}
+    .dir-rtl table.ls-answers,.dir-rtl table.ls-answers thead,.dir-rtl table.ls-answers tbody,.dir-rtl table.ls-answers th,.dir-rtl table.ls-answers td,table.ls-answers tr {text-align:right;}
+    .ls-answers > thead > tr > th, .ls-answers > tbody > tr > th, .ls-answers > tfoot > tr > th, .ls-answers > thead > tr > td, .ls-answers > tbody > tr > td, .ls-answers > tfoot > tr > td {
+        border: 0 none;
+    }
+    .ls-answers > thead > tr > th, .ls-answers > tbody > tr > th, .ls-answers > tfoot > tr > th, .ls-answers > thead > tr > td, .ls-answers > tbody > tr > td, .ls-answers > tfoot > tr > td {
+        border: 0 none;
+    }
+    .ls-answers > thead > tr,.ls-answers > tbody > tr {border: 1px solid @table-border-color;}
+    .ls-answers th {font-weight: 700;}
+    table.ls-answers thead{display:none} /* We don't need it for accessibility : we already have the label */
+
+    .dir-ltr table.ls-answers tbody td.answer-item{text-align:left;}
+    .dir-rtl table.ls-answers tbody td.answer-item{text-align:right;}
+    table.ls-answers .information-item:empty{display:none}
+
+    /* Show the label and fix the input*/
+    .ls-label-xs-visibility
+    {
+        display:initial;
+        position:unset;
+        width: initial;
+        height: initial;
+        overflow:initial;
+    }
+    td.radio-item,td.checkbox-item,td.radio-text-item,td.checkbox-text-item{margin-bottom:0;position:relative;}
+    
+    table.ls-answers tbody .control-label{text-align:left}
+    .dir-rtl table.ls-answers tbody .control-label{text-align:right}
+    table.ls-answers .answertextright{text-align:right}
+    .dir-rtl table.ls-answers .answertextright{text-align:left}
+
+
+    .dir-ltr table.ls-answers .ls-label-xs-visibility{left:auto;}
+    .dir-rtl table.ls-answers .ls-label-xs-visibility{right:auto;}
+
+    table.ls-answers .radio-item .ls-label-xs-visibility,table.ls-answers .checkbox-item .ls-label-xs-visibility{
+        line-height: initial;
+        text-indent: initial;
+    }
+    .dir-ltr table.ls-answers .radio-item .ls-label-xs-visibility,.dir-ltr table.ls-answers .checkbox-item .ls-label-xs-visibility{margin-left:0;}
+    .dir-rtl table.ls-answers .radio-item .ls-label-xs-visibility,.dir-rtl table.ls-answers .checkbox-item .ls-label-xs-visibility{margin-right:0;}
+
+
+
+      td.radio-item input[type="radio"], td.checkbox-item input[type="checkbox"] {
+        position:absolute;
+        top:50%;
+        margin:0;margin-top:-@font-size-base*0.6;
+      }
+        table.ls-answers > tbody > tr:hover {
+            background-color: transparent;
+        }
+        .table-col-hover col.hover{
+        background: transparent;
+        }
+        .table-col-hover tr.answers-list:hover{
+        background: transparent;
+        }
+        .table-hover col.hover{
+        background: transparent;
+        }
+}
+/* But not for fixed table */
+@media
+only screen and (max-width: @screen-sm) {
+    .table-responsive table.ls-answers,.table-fixed table.ls-answers{display:table}
+    .table-responsive table.ls-answers thead,.table-fixed table.ls-answers thead {display: table-header-group;}
+    .table-responsive table.ls-answers tbody,.table-fixed table.ls-answers tbody {display: table-row-group;}
+    .table-responsive table.ls-answers tr,.table-fixed table.ls-answers tr {display: table-row;}
+    .table-responsive table.ls-answers th,.table-responsive table.ls-answers td,.table-fixed table.ls-answers th,.table-fixed table.ls-answers td {display: table-cell;}
+    .table-responsive table.ls-answers td.radio-item,.table-responsive table.ls-answers td.checkbox-item {padding:@table-cell-padding @table-condensed-cell-padding;}
+    .table-fixed table.ls-answers td.radio-item,.table-fixed table.ls-answers td.checkbox-item {padding:@table-cell-padding @table-condensed-cell-padding;}
+    .dir-ltr .table-responsive table.ls-answers th,.dir-ltr .table-responsive table.ls-answers td {text-align: center;}
+    .dir-ltr .table-fixed table.ls-answers th,.dir-ltr .table-fixed table.ls-answers td {text-align: center;}
+
+    .table-responsive .table-bordered.ls-answers > thead > tr > th, .table-responsive .table-bordered.ls-answers > tbody > tr > th, .table-responsive .table-bordered.ls-answers > tfoot > tr > th, .table-responsive .table-bordered.ls-answers > thead > tr > td, .table-responsive .table-bordered.ls-answers > tbody > tr > td, .table-responsive .table-bordered.ls-answers > tfoot > tr > td {
+        border: 1px solid @table-border-color;
+    }
+    .table-fixed .table-bordered.ls-answers > thead > tr > th, .table-fixed .table-bordered.ls-answers > tbody > tr > th, .table-fixed .table-bordered.ls-answers > tfoot > tr > th, .table-fixed .table-bordered.ls-answers > thead > tr > td, .table-fixed .table-bordered.ls-answers > tbody > tr > td, .table-fixed .table-bordered.ls-answers > tfoot > tr > td {
+        border: 1px solid @table-border-color;
+    }
+
+    .dir-ltr .table-responsive table.ls-answers tbody th.answertext {text-align: right;}
+    .dir-ltr .table-fixed table.ls-answers tbody th.answertext {text-align: right;}
+    .table-responsive table.ls-answers tbody td.answer-item {text-align:center;}
+    .table-fixed table.ls-answers tbody td.answer-item {text-align:center;}
+    .table-responsive table.ls-answers tbody td.radio-item input[type="radio"],.table-responsive table.ls-answers tbody td.checkbox-item input[type="checkbox"]{left:auto;right:auto}
+    .table-fixed table.ls-answers tbody td.radio-item input[type="radio"],.table-fixed table.ls-answers tbody td.checkbox-item input[type="checkbox"]{left:auto;right:auto}
+    .table-responsive td.radio-item input[type="radio"],.table-responsive td.checkbox-item input[type="checkbox"],
+    .table-fixed td.radio-item input[type="radio"],.table-fixed td.checkbox-item input[type="checkbox"]{
+        position:relative;
+        top:auto;
+        margin:0;
+      }
+    .table-responsive table.ls-answers .radio-item .ls-label-xs-visibility,.table-responsive table.ls-answers .checkbox-item .ls-label-xs-visibility,
+    .table-fixed table.ls-answers .radio-item .ls-label-xs-visibility,.table-fixed table.ls-answers .checkbox-item .ls-label-xs-visibility
+    {
+        position: absolute;
+        width:1px;
+        height:1px;
+        overflow:hidden;
+        padding:0;
+    }
+    .table-responsive .ls-answers th,.table-fixed .ls-answers th {font-weight: normal;}
+
+    .table-responsive table.ls-answers > tbody > tr:hover,.table-fixed table.ls-answers > tbody > tr:hover {
+        background-color: @table-bg-hover;
+    }
+    .table-responsive .table-col-hover col.hover,.table-fixed .table-col-hover col.hover{
+      background: @table-bg-hover;
+    }
+    .table-responsive .table-col-hover tr.answers-list:hover,.table-fixed .table-col-hover tr.answers-list:hover{
+      background: @ls-hover-column-bg;
+    }
+    .table-responsive .table-hover col.hover,.table-fixed .table-hover col.hover{
+      background: @ls-hover-column-bg;
+    }
+}
