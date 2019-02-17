@@ -132,30 +132,30 @@ td.radio-item input[type="radio"],td.checkbox-item input[type="checkbox"] {
 */
 @media
 only screen and (max-width: @screen-sm) {
-  td.radio-item label.ls-label-xs-visibility,td.checkbox-item label.ls-label-xs-visibility{
+  .no-more-table td.radio-item label.ls-label-xs-visibility,
+  .no-more-table td.checkbox-item label.ls-label-xs-visibility
+  {
       position:relative;
       display: block;
       overflow:initial;
       width: auto;
       height: auto;
-      line-height: inherit;
+      line-height: @line-height-base;
       text-indent: initial;
-      padding:0;
       padding: @ls-radiocheckoxpadding-vertical @ls-radiocheckbox-awesome-size;
       top: auto;
       margin-top : 0;
       clip: unset;
   }
-  td.radio-item label.ls-label-xs-visibility::before,td.checkbox-item label.ls-label-xs-visibility::before {
-    margin-top : -@ls-radiocheckbox-awesome-size*2/3;
-  }
-  td.radio-item label.ls-label-xs-visibility::after,td.checkbox-item label.ls-label-xs-visibility::after {
-    margin-top : -(@ls-radiocheckbox-awesome-size*2/3 - @ls-radiocheckbox-awesome-innerpaddingsize);
-  }
-  .dir-ltr td.radio-item label.ls-label-xs-visibility,.dir-ltr td.checkbox-item label.ls-label-xs-visibility {
-    padding-left: @ls-radiocheckbox-awesome-size*2;left:auto;
-  }
-  .dir-rtl td.radio-item label.ls-label-xs-visibility,.dir-rtl td.checkbox-item label.ls-label-xs-visibility {
-    padding-right: @ls-radiocheckbox-awesome-size*2;right:auto;
-  }
+  .no-more-table td.radio-item label.ls-label-xs-visibility::before,
+  .no-more-table td.checkbox-item label.ls-label-xs-visibility::before
+    {margin-top : -@ls-radiocheckbox-awesome-size*2/3;}
+  .no-more-table td.radio-item label.ls-label-xs-visibility::after,.no-more-table td.checkbox-item label.ls-label-xs-visibility::after
+    {margin-top : -(@ls-radiocheckbox-awesome-size*2/3 - @ls-radiocheckbox-awesome-innerpaddingsize);}
+  .dir-ltr .no-more-table td.radio-item label.ls-label-xs-visibility,
+  .dir-ltr .no-more-table td.checkbox-item label.ls-label-xs-visibility
+    {padding-left: @ls-radiocheckbox-awesome-size*2;left:auto;}
+  .dir-rtl .no-more-table td.radio-item label.ls-label-xs-visibility,
+  .dir-rtl .no-more-table td.checkbox-item label.ls-label-xs-visibility
+    {padding-right: @ls-radiocheckbox-awesome-size*2;right:auto;}
 }
