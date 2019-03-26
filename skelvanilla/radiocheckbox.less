@@ -44,10 +44,10 @@ li.radio-item.other-item label,li.checkbox-item.other-item label
 .radio-text-item.answer-checked,.checkbox-text-item.answer-checked
   {background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
 /* hover */
-.radio-item label:hover,.checkbox-item label:hover,.checkbox-item input[type="checkbox"]:checked + label:hover,
-.radio-item input[type="radio"]:focus + label,.checkbox-item input[type="checkbox"]:focus + label,.checkbox-item input[type="checkbox"]:checked:focus + label
+.radio-item label:hover,.checkbox-item label:hover,.checkbox-item input[type="checkbox"]:checked + label:hover
   {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
 /* focus */
+li.radio-item input[type="radio"]:focus + label,li.checkbox-item input[type="checkbox"]:focus + label,li.checkbox-item input[type="checkbox"]:checked:focus + label
 li.radio-text-item input[type="radio"]:focus + label,li.checkbox-text-item input[type="checkbox"]:focus + label
   {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
 
@@ -120,5 +120,7 @@ only screen and (max-width: @screen-sm) {
       {background:transparent;color:inherit;}
   .no-more-table .radio-item label.ls-label-xs-visibility:hover,.no-more-table .checkbox-item label.ls-label-xs-visibility:hover
       {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
-
+  /* focus */
+  .no-more-table td.radio-item input[type="radio"]:focus + label,.no-more-table td.checkbox-item input[type="checkbox"]:focus + label
+    {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
 }
