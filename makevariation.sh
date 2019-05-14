@@ -7,10 +7,13 @@ do
     cat ${variable} > variables.less
     variation=${variable##*/}
     variation=${variation%.*}
+    # reset to default
     cat skelvanilla-default/variables-init.less > variables-init.less
     cat skelvanilla-default/variables-skelvanilla.less > variables-skelvanilla.less
     cat skelvanilla-default/variables-bootswatch.less > variables-bootswatch.less
     cat skelvanilla-default/variables-slider.less > variables-slider.less
+    cat skelvanilla-default/variables-extra.less > variables-extra.less
+    # Check if variation exist in each directory
     if [ -r variations-init/${variation}.less ];
     then
         cat variations-init/${variation}.less > variables-init.less
@@ -27,6 +30,7 @@ do
     then
         cat variations-slider/${variation}.less > variables-slider.less
     fi
+    # Optimize theme css
     for theme in "${themes[@]}"
     do
         themename=${theme/theme/$variation}
@@ -36,13 +40,27 @@ do
     done
     echo "variations ${variation} done";
 done
-# Make lsbootstrap.css with contrast button
-cat variations-init/contrast.less > variables-init.less
-cat variations-variables/contrast.less > variables.less
-cat variations-skelvanilla/contrast.less > variables-skelvanilla.less
+
+# reset to default to make default theme
+cat skelvanilla-default/variables-init.less > variables-init.less
+cat skelvanilla-default/variables.less > variables.less
+cat skelvanilla-default/variables-skelvanilla.less > variables-skelvanilla.less
 cat skelvanilla-default/variables-bootswatch.less > variables-bootswatch.less
 cat skelvanilla-default/variables-slider.less > variables-slider.less
+cat skelvanilla-default/variables-extra.less > variables-extra.less
 
+# Add your own needed variables files her , sample
+# cat variations-variables/myownvariables.less > variables.less
+
+# Make lsbootstrap.css with awesome button
 lessc --source-map --source-map-rootpath=https://gitlab.com/SondagesPro/SurveyThemes/less-limesurvey/raw/master/ theme-button_awesome.less bootstrap.css
 
-echo "All variations done, you can use at variations with skelvanilla"
+# remove working files
+rm variables-init.less
+rm variables.less
+rm variables-skelvanilla.less
+rm variables-bootswatch.less
+rm variables-slider.less
+rm variables-extra.less
+
+echo "All variations done, you can copy boostrap.css, bootstrap.css.map and variations directiry to your css directory in Skelvanilla LimeSurvey theme"

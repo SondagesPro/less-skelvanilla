@@ -14,4 +14,10 @@
 /variations/*
 lsbootstrap.css
 lsbootstrap.css.map
-
+bootstrap.css
+bootstrap.css.map
+variables-init.less
+variables.less
+variables-slider.less
+variables-skelvanilla.less
+variables-extra.less
