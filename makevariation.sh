@@ -30,6 +30,10 @@ do
     then
         cat variations-slider/${variation}.less > variables-slider.less
     fi
+    if [ -r variations-extra/${variation}.less ];
+    then
+        cat variations-extra/${variation}.less > variables-extra.less
+    fi
     # Optimize theme css
     for theme in "${themes[@]}"
     do
