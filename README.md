@@ -27,4 +27,4 @@ The default variables use only rem and more contrast
 3. Update makevariations.sh script after `## Add your own needed variables files here` line to use your own less file for default
 4. Update `lessc` generator line to use your prefered theme.
 5. Move variations directory and boostrap.css to your [skelvanilla](https://gitlab.com/SondagesPro/SurveyThemes/skelvanilla) extended model
-6. Add your own variation in [skelvanilla](https://gitlab.com/SondagesPro/SurveyThemes/skelvanilla) config.xml file
+6. Add your own variation in [skelvanilla](https://gitlab.com/SondagesPro/SurveyThemes/skelvanilla) config.xml file at `availablevariations` part.
