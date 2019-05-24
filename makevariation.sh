@@ -53,8 +53,9 @@ cat skelvanilla-default/variables-bootswatch.less > variables-bootswatch.less
 cat skelvanilla-default/variables-slider.less > variables-slider.less
 cat skelvanilla-default/variables-extra.less > variables-extra.less
 
-# Add your own needed variables files her , sample
+## Add your own needed variables files here , sample
 # cat variations-variables/myownvariables.less > variables.less
+# cat variations-extra/myownvariables.less > variables.less
 
 # Make lsbootstrap.css with awesome button
 lessc --source-map --source-map-rootpath=https://gitlab.com/SondagesPro/SurveyThemes/less-limesurvey/raw/master/ theme-button_awesome.less bootstrap.css
