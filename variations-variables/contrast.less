@@ -205,7 +205,7 @@
 @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2));
 
 //** `.form-group` margin
-@form-group-margin-bottom:       0.5rem;
+@form-group-margin-bottom:       0.7rem;
 
 @legend-color:                   @gray-dark;
 @legend-border-color:            #e5e5e5;
@@ -356,28 +356,29 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       6rem;
 
-@navbar-default-color:             #fff;
-@navbar-default-bg:                #132531;
+@navbar-default-color:             @gray-dark;
+@navbar-default-bg:                #f8f8f8;
 @navbar-default-border:            darken(@navbar-default-bg, 6.5%);
 
 // Navbar links
-@navbar-default-link-color:                #fff;
-@navbar-default-link-hover-color:          #132531;
+@navbar-default-link-color:                @gray-dark;
+@navbar-default-link-hover-color:          @gray-base;
 @navbar-default-link-hover-bg:             #fff;
-@navbar-default-link-active-color:         #132531;
-@navbar-default-link-active-bg:            #fff;
-@navbar-default-link-disabled-color:       #fff;
-@navbar-default-link-disabled-bg:          #068139;
+@navbar-default-link-active-color:         @gray-darker;
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-disabled-color:       #ccc;
+@navbar-default-link-disabled-bg:          transparent;
 
 // Navbar brand label
 @navbar-default-brand-color:               @navbar-default-link-color;
-@navbar-default-brand-hover-color:         #068139; //contrast 3.15, so min 19px;
+@navbar-default-brand-hover-color:         darken(@navbar-default-brand-color, 10%);
 @navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle
 @navbar-default-toggle-hover-bg:           #ddd;
 @navbar-default-toggle-icon-bar-bg:        #888;
 @navbar-default-toggle-border-color:       #ddd;
+
 
 
 //=== Inverted navbar
