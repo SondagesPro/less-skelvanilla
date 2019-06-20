@@ -11,13 +11,13 @@
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
 @gray-dark:              lighten(@gray-base, 20%);   // #333
 @gray:                   lighten(@gray-base, 33.5%); // #555
-@gray-light:             lighten(@gray-base, 46.7%); // #777
-@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+@gray-light:             #707070; /** ~ 43% lighten(@gray-base, 46.7%); // #777 */
+@gray-lighter:           #e0e0e0;
 
 @brand-primary:         #265680;
-@brand-success:         #13B213;
+@brand-success:         #0e660e;
 @brand-info:            #1C5F74;
-@brand-warning:         #e68600;
+@brand-warning:         #996E00;
 @brand-danger:          #B21313;
 
 
@@ -487,21 +487,21 @@
 
 //== Form states and alerts
 //
-@state-success-text:             @brand-success;
-@state-success-bg:               desaturate(lighten(@brand-success,55%),10%);
-@state-success-border:           lighten(spin(@state-success-text, -10), 5%);
+@state-success-text:             #316132;
+@state-success-bg:               #dff0d8;
+@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
 
-@state-info-text:                @brand-info;
-@state-info-bg:                  desaturate(lighten(@brand-info,55%),10%);
-@state-info-border:              lighten(spin(@state-info-text, -10), 7%);
+@state-info-text:                #26566E;
+@state-info-bg:                  #d9edf7;
+@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
 
-@state-warning-text:             @brand-warning;
-@state-warning-bg:               desaturate(lighten(@brand-warning,55%),10%);
-@state-warning-border:           lighten(spin(@state-warning-text, -10), 5%);
+@state-warning-text:             #6B552E;
+@state-warning-bg:               #fcf6c9;
+@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
 
-@state-danger-text:              @brand-danger;
-@state-danger-bg:                desaturate(lighten(@brand-danger,55%),1%);
-@state-danger-border:            lighten(spin(@state-danger-text, -10), 5%);
+@state-danger-text:              #9C2A27;
+@state-danger-bg:                #f2dede;
+@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
 
 
 //== Tooltips
@@ -615,20 +615,20 @@
 @alert-border-radius:         @border-radius-base;
 @alert-link-font-weight:      bold;
 
-@alert-success-bg:            lighten(desaturate(@brand-success,30%),55%);
-@alert-success-text:          darken(@state-success-text,20%);
+@alert-success-bg:            @state-success-bg;
+@alert-success-text:          darken(@brand-success,20%);
 @alert-success-border:        @state-success-border;
 
-@alert-info-bg:              lighten(desaturate(@brand-info,30%),55%);
-@alert-info-text:             darken(@state-info-text,20%);
+@alert-info-bg:               @state-info-bg;
+@alert-info-text:             darken(@brand-info,20%);
 @alert-info-border:           @state-info-border;
 
-@alert-warning-bg:            lighten(desaturate(@brand-warning,30%),55%);
-@alert-warning-text:          darken(@state-warning-text,20%);
+@alert-warning-bg:            @state-warning-bg;
+@alert-warning-text:          darken(@brand-warning,20%);
 @alert-warning-border:        @state-warning-border;
 
-@alert-danger-bg:             lighten(desaturate(@brand-danger,30%),55%);
-@alert-danger-text:           darken(@state-danger-text,20%);
+@alert-danger-bg:             @state-danger-bg;
+@alert-danger-text:           darken(@brand-danger,20%);
 @alert-danger-border:         @state-danger-border;
 
 
