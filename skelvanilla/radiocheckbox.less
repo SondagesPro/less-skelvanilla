@@ -7,9 +7,9 @@
     border-width: @ls-radiocheckox-borderwidth @ls-radiocheckox-borderwidth 0;
     margin:0;
 }
-.radio-list li.radio-item:last-child label,.checkbox-list li.checkbox-item:last-child label{
-    border-bottom-width:@ls-radiocheckox-borderwidth;
-}
+.radio-list li.radio-item:last-child label,.checkbox-list li.checkbox-item:last-child label,
+.radio-list li.radio-item.last-child label,.checkbox-list li.checkbox-item.last-child label
+  {border-bottom-width:@ls-radiocheckox-borderwidth;}
 .radio-list li.radio-text-item,.checkbox-list li.checkbox-text-item {
     border:@ls-radiocheckox-borderwidth solid @ls-radiocheckox-border;
     cursor:pointer;
@@ -17,15 +17,20 @@
     margin:0;
 }
 
-.radio-list li.radio-text-item:last-child ,.checkbox-list li.checkbox-text-item:last-child {border-bottom-width:@ls-radiocheckox-borderwidth;}
+.radio-list li.radio-text-item:last-child ,.checkbox-list li.checkbox-text-item:last-child,
+.radio-list li.radio-text-item.last-child ,.checkbox-list li.checkbox-text-item.last-child
+  {border-bottom-width:@ls-radiocheckox-borderwidth;}
 ul.form-inline li.radio-item label{border:@ls-radiocheckox-borderwidth solid @ls-radiocheckox-border;}
 
 /* Round border on list */
-.radio-list li:first-child label,.checkbox-list ul li:first-child label
+.radio-list li:first-child label,.checkbox-list ul li:first-child label,
+.radio-list li.first-child label,.checkbox-list ul li.first-child label
   {border-top-left-radius: @ls-radiocheckox-border-radius;border-top-right-radius: @ls-radiocheckox-border-radius;}
-.radio-list ul li:last-child label,.checkbox-list ul li:last-child label
+.radio-list ul li:last-child label,.checkbox-list ul li:last-child label,
+.radio-list ul li.last-child label,.checkbox-list ul li.last-child label
   { border-bottom-left-radius: @ls-radiocheckox-border-radius; border-bottom-right-radius: @ls-radiocheckox-border-radius;}
-.radio-list li.radio-text-item:last-child ,.checkbox-list li.checkbox-text-item:last-child
+.radio-list li.radio-text-item:last-child ,.checkbox-list li.checkbox-text-item:last-child,
+.radio-list li.radio-text-item.last-child ,.checkbox-list li.checkbox-text-item.last-child
   {border-bottom-left-radius: @ls-radiocheckox-border-radius; border-bottom-right-radius:@ls-radiocheckox-border-radius;}
 ul.form-inline li.radio-item label{border-radius: @ls-radiocheckox-border-radius;}
 
