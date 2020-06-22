@@ -1,0 +1,43 @@
+.table-fixed-header table.table-bordered.ls-answers {
+    border-collapse: separate;
+}
+.table-fixed-header table.table-bordered.ls-answers {
+    border-right:0;
+    border-bottom:0;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border-left: 0;
+        border-top: 0;
+      }
+    }
+  }
+}
+.table-fixed-header table.ls-answers > thead > tr > td,
+.table-fixed-header table.ls-answers > thead > tr > th{
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    /* same than header */
+    z-index: 2000;
+}
+.table-fixed-header table.ls-answers > thead > tr > td,
+.table-fixed-header table.ls-answers > thead > tr > th{
+  background-color: @body-bg;
+}
+.table-fixed-header .well table.ls-answers > thead > tr > td,
+.table-fixed-header .well table.ls-answers > thead > tr > th,
+.table-fixed-header.well table.ls-answers > thead > tr > td,
+.table-fixed-header.well table.ls-answers > thead > tr > th{
+  background-color: @well-bg;
+}
+.table-fixed-header .panel table.ls-answers > thead > tr > td,
+.table-fixed-header .panel table.ls-answers > thead > tr > th,
+.table-fixed-header.panel table.ls-answers > thead > tr > td,
+.table-fixed-header.panel table.ls-answers > thead > tr > th{
+  background-color: @panel-bg;
+}
+.table-fixed-header .ls-heading-repeat{display:none}

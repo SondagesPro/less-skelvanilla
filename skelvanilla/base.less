@@ -1,6 +1,7 @@
 /* Basic question css */
 .question-container{margin-bottom:@question-bottom-margin}
 .question-container.no-footer-spacer{margin-bottom:0}
+.answer-container{position: relative}
 /* Global question part */
 .question-text ,.question-text h2,.question-text h3,
 .lead.question-text,
@@ -30,7 +31,6 @@ th.col-hover{
   .input-size(@input-height-base; @padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @input-border-radius-small);
 }
 /* Input radio checkbox position */
-
 .answer-item ,.radio-item ,.checkbox-item {position:relative}
 .radio-item label,.checkbox-item label {display:block}
 .radio-item input[type="radio"],.checkbox-item input[type="checkbox"] {z-index:1;position:absolute;}

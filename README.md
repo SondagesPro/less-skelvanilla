@@ -1,17 +1,17 @@
 # Basic less generator for LimeSurvey #
 
-Updated from boostrap
+Updated from bootstrap
 
 - Allow usage of rem
 - Set current font-size to rem
-- Add more usage of current variable top make different variations
+- Add more usage of current variable to make different variations
 - Some fix for limesurvey with bootsrap
 
 The default variables use only rem and more contrast
 
 ## Usage ##
 
-### Single boostrap replace ##
+### Single bootstrap replace ##
 
 1. Copy file from  skelvanilla-default directory to base directory
 2. Update `variables.less` and optionnaly other less files. If you already have a variables.less file : you can use it directly.
@@ -26,5 +26,5 @@ The default variables use only rem and more contrast
 2. Optionnaly create adapted less file in other directory (see default directory for usage)
 3. Update makevariations.sh script after `## Add your own needed variables files here` line to use your own less file for default
 4. Update `lessc` generator line to use your prefered theme.
-5. Move variations directory and boostrap.css to your [skelvanilla](https://gitlab.com/SondagesPro/SurveyThemes/skelvanilla) extended model
+5. Move variations directory and bootstrap.css to your [skelvanilla](https://gitlab.com/SondagesPro/SurveyThemes/skelvanilla) extended model
 6. Add your own variation in [skelvanilla](https://gitlab.com/SondagesPro/SurveyThemes/skelvanilla) config.xml file at `availablevariations` part.

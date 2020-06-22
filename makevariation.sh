@@ -1,4 +1,7 @@
 #!/bin/bash
+# Script to make variation, need npm and some extra
+# npm install less -g
+# npm install clean-css-cli -g
 themes=(theme-base theme-button theme-awesome theme-button_awesome )
 
 mkdir variations
