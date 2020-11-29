@@ -2,3 +2,17 @@
 .slider-item .slider-selection {#gradient > .vertical(@limesurvey-slider-selection-1, @limesurvey-slider-selection-2);}
 .slider-item .help-block{margin:0}
 li.slider-item {margin-bottom: 0;}
+.slider.slider-untouched .slider-handle{background: @slider-gray-1;}
+.slider.slider-untouched .slider-handle.custom{background: transparent none;}
+.slider.slider-untouched .slider-handle.custom::before{color: @slider-gray-1;}
+
+.slider-handle {
+	&.custom {
+		&::before{
+			line-height: @slider-line-height*1.5;
+			font-size: @slider-line-height*1.5;
+		}
+		top:-@slider-line-height*0.25;
+	}
+}
+.slider.slider-horizontal .slider-handle.custom{margin-left: -@slider-line-height*0.75;}
