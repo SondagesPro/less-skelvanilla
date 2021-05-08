@@ -19,9 +19,12 @@
 @import "variables-init.less";
 @import "variables.less";
 @import "variables-slider.less";
-@import "variables-skelvanilla.less";
 
 @import "@{limesurvey}/mixins.less";
+
+@import "variables-select2.less";
+@import "variables-moreselect2.less";
+@import "variables-skelvanilla.less";
 
 // Reset and dependencies
 @import "@{bootstrap}/normalize.less";
@@ -84,12 +87,15 @@
 @import "@{bootstrap}/responsive-utilities.less";
 
 // Bootswatch
-@import "variables-bootswatch.less";
+@import "customization-bootswatch.less";
 
 // Slider
 @import '@{limesurvey}/slider-rules.less';
 @import '@{skelvanilla}/slider.less';
 
+// Select2
+@import 'select2-boostrap-theme/select2-bootstrap.less';
+
 // Personnalisation
-@import "variables-extra.less";
+@import "customization-extra.less";
 @import "customize.less";
