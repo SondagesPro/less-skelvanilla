@@ -23,6 +23,6 @@ variables-slider.less
 variables-skelvanilla.less
 variables-extra.less
 # specific
-/variablesnames/variablesnames/*
-/variablesnames/variablesnames/*/*
+/variablesnames/*
+/variablesnames/*/*
 !/variablesnames/variablesnames/purpose.md
