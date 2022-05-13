@@ -242,7 +242,8 @@
     padding-bottom: @navbar-padding-vertical;
     line-height: @line-height-computed;
     text-decoration: none;
-    border:1px solid;
+    border:@link-focus-width solid;
+    border-radius: @border-radius-small;
     &:focus-visible {
       outline:0;
     }
@@ -405,7 +406,6 @@
 .navbar-default {
   background-color: @navbar-default-bg;
   border-color: @navbar-default-border;
-
   .navbar-brand {
     color: @navbar-default-brand-color;
     &:hover,
@@ -415,6 +415,7 @@
     }
     &:focus-visible {
       border-color: @link-focus-color;
+      border-color: rgba(red(@link-focus-color), green(@link-focus-color), blue(@link-focus-color), 0.3);
     }
   }
 
@@ -433,6 +434,7 @@
       }
       &:focus-visible {
         border-color: @link-focus-color;
+        border-color: rgba(red(@link-focus-color), green(@link-focus-color), blue(@link-focus-color), 0.3);
       }
     }
     > .active > a {

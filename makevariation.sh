@@ -52,6 +52,7 @@ do
     do
         themename=${theme/theme/$variation}
         lessc ${theme}.less variations/${themename}.css
+        #~ mv variations/${themename}.css variations/${themename}.min.css
         cleancss variations/${themename}.css > variations/${themename}.min.css
         rm variations/${themename}.css
     done

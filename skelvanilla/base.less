@@ -84,10 +84,25 @@ only screen and (max-width: @screen-sm) {
     .radio-list .radio-item.othertext-label-checkox-container label{padding-bottom:0}
     .other-text-item{margin-bottom:0;padding:0 1em 0.5em}
 }
-.skip-navigation.nav > li > a {
+.skip-navigation a {
+    background-color: @body-bg;
+}
+.skip-navigation.navbar-nav a {
     padding: 0;
 }
-.skip-navigation.nav > li > a:focus {
+.skip-navigation.navbar-nav a:focus {
+    padding: @nav-link-padding;
+}
+.navbar-default .skip-navigation.navbar-nav > li a:focus {
+    background-color: @navbar-default-bg;
+}
+.navbar-inverse .skip-navigation.navbar-nav > li a:focus {
+    background-color: @navbar-inverse-bg;
+}
+.skip-navigation.navbar-nav > li > a {
+    padding: 0;
+}
+.skip-navigation.navbar-nav > li > a:focus {
     padding: @nav-link-padding;
 }
 
