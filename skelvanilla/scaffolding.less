@@ -47,7 +47,9 @@ textarea {
 
 a {
   color: @link-color;
-  text-decoration: none;
+  text-decoration: @link-decoration;
+  display:inline-block;
+  border-radius:@border-radius-small;
 
   &:hover,
   &:focus {
@@ -55,8 +57,14 @@ a {
     text-decoration: @link-hover-decoration;
   }
 
-  &:focus {
+  &:focus-visible {
     .tab-focus();
+  }
+
+  &:focus-visible {
+    outline:@link-focus-color @link-focus-width @link-focus-style;
+    outline:rgba(red(@link-focus-color), green(@link-focus-color), blue(@link-focus-color), 0.3);
+    outline-offset:@link-focus-offset;
   }
 }
 

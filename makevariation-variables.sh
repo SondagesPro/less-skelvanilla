@@ -3,7 +3,7 @@
 # npm install less -g
 # npm install clean-css-cli -g
 if [ "$#" -lt 1 ]; then
-   echo "Usage : makevariation-variables.sh variablename"
+   echo "Usage : makevariation-variables.sh variablename [theme]"
    exit 1;
 fi
 variablename="$1";

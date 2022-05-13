@@ -166,12 +166,14 @@
   font-size: @font-size-large;
   line-height: @line-height-computed;
   min-height: @navbar-height;
-
+  text-decoration: none;
   &:hover,
   &:focus {
     text-decoration: none;
   }
-
+  &:focus-visible {
+    outline:0;
+  }
   > img {
     display: block;
   }
@@ -207,7 +209,9 @@
   &:focus {
     outline: 0;
   }
-
+  &:focus-visible {
+    outline:0;
+  }
   // Bars
   .icon-bar {
     display: block;
@@ -237,6 +241,11 @@
     padding-top:    @navbar-padding-vertical;
     padding-bottom: @navbar-padding-vertical;
     line-height: @line-height-computed;
+    text-decoration: none;
+    border:1px solid;
+    &:focus-visible {
+      outline:0;
+    }
   }
 
   @media (max-width: @grid-float-breakpoint-max) {
@@ -404,6 +413,9 @@
       color: @navbar-default-brand-hover-color;
       background-color: @navbar-default-brand-hover-bg;
     }
+    &:focus-visible {
+      border-color: @link-focus-color;
+    }
   }
 
   .navbar-text {
@@ -413,11 +425,14 @@
   .navbar-nav {
     > li > a {
       color: @navbar-default-link-color;
-
+      border-color: @navbar-default-bg;
       &:hover,
       &:focus {
         color: @navbar-default-link-hover-color;
         background-color: @navbar-default-link-hover-bg;
+      }
+      &:focus-visible {
+        border-color: @link-focus-color;
       }
     }
     > .active > a {
@@ -434,6 +449,9 @@
       &:focus {
         color: @navbar-default-link-disabled-color;
         background-color: @navbar-default-link-disabled-bg;
+      }
+      &:focus-visible {
+        border-color: @navbar-default-bg;
       }
     }
   }
@@ -538,6 +556,9 @@
       color: @navbar-inverse-brand-hover-color;
       background-color: @navbar-inverse-brand-hover-bg;
     }
+    &:focus-visible {
+      border-color: @link-focus-color;
+    }
   }
 
   .navbar-text {
@@ -547,11 +568,14 @@
   .navbar-nav {
     > li > a {
       color: @navbar-inverse-link-color;
-
+      border-color:navbar-inverse-bg;
       &:hover,
       &:focus {
         color: @navbar-inverse-link-hover-color;
         background-color: @navbar-inverse-link-hover-bg;
+      }
+      &:focus-visible {
+        border-color: @link-focus-color;
       }
     }
     > .active > a {
@@ -568,6 +592,9 @@
       &:focus {
         color: @navbar-inverse-link-disabled-color;
         background-color: @navbar-inverse-link-disabled-bg;
+      }
+      &:focus-visible {
+        border-color: @navbar-inverse-bg;
       }
     }
   }

@@ -8,3 +8,11 @@ Demonstrations available at
 # Copyright and license
 
 The license is available within the repository in the [LICENSE](LICENSE) file.
+
+# Update for skelvanilla
+
+with usage of A11y select2
+
+- Remove pixel system on margin : -1 and -2 is done for pixel size.
+- Set select2-selection__choice__remove near link
+- duspoly inline-block for multiple choice container
