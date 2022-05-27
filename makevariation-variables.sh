@@ -25,6 +25,7 @@ cat skelvanilla-default/variables-skelvanilla.less > variables-skelvanilla.less
 cat skelvanilla-default/variables-select2.less > variables-select2.less
 cat skelvanilla-default/variables-moreselect2.less > variables-moreselect2.less
 cat skelvanilla-default/variables-slider.less > variables-slider.less
+cat skelvanilla-default/variables-button-item.less > variables-slider.less
 cat skelvanilla-default/customization-bootswatch.less > customization-bootswatch.less
 cat skelvanilla-default/customization-extra.less > customization-extra.less
 
@@ -53,6 +54,10 @@ fi
 if [ -r variablesnames/${variablename}/variables-slider.less ];
 then
     cat variablesnames/${variablename}/variables-slider.less > variables-slider.less
+fi
+if [ -r variablesnames/${variablename}/variables-button-item.less ];
+then
+    cat variablesnames/${variablename}/variables-button-item.less > variables-button-item.less
 fi
 if [ -r variablesnames/${variablename}/customization-bootswatch.less ];
 then
