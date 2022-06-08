@@ -28,3 +28,26 @@ The default variables use only rem and more contrast
 4. Update `lessc` generator line to use your prefered theme.
 5. Move variations directory and bootstrap.css to your [skelvanilla](https://gitlab.com/SondagesPro/SurveyThemes/skelvanilla) extended model
 6. Add your own variation in [skelvanilla](https://gitlab.com/SondagesPro/SurveyThemes/skelvanilla) config.xml file at `availablevariations` part.
+
+### Single variation creation ##
+
+With `makevariation-variables.sh` you can create your own boostrap.css and the related variation. It's the simpliest way to get needed file for your template.
+
+1. Create a directory in `variablesnames` directory
+2. Put your own variables.less in this directory
+3. Add other files (see `skelvanilla-default` directory for used files)
+4. Launch script : `sh makevariation-variables.sh variablename [theme]` (default theme is `button_awesome`)
+5. Update skelvanilla **Available variation** at global level to 
+```
+{
+  "variablename": {
+    "name": "Variable Name",
+    "base": "1",
+    "button": "1",
+    "awesome": "1",
+    "button_awesome": "1"
+  }
+}
+```
+
+
