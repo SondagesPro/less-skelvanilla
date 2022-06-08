@@ -37,7 +37,9 @@ With `makevariation-variables.sh` you can create your own boostrap.css and the r
 2. Put your own variables.less in this directory
 3. Add other files (see `skelvanilla-default` directory for used files)
 4. Launch script : `sh makevariation-variables.sh variablename [theme]` (default theme is `button_awesome`)
-5. Update skelvanilla **Available variation** at global level to 
+5. Replace boostrap.css in skelvanilla extended version
+6. Add variations directory in skelvanilla extended version
+5. Update skelvanilla extended version **Available variation** at global level to 
 ```
 {
   "variablename": {
