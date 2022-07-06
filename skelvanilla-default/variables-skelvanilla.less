@@ -47,18 +47,18 @@
 @ls-hover-column-bg:                    mix(@table-bg-hover,@body-bg,50%);
 
 // Usage with template-skelvanilla-radiocheckbox
-@ls-radiocheckox-borderwidth:                 1px;
-@ls-radiocheckox-border:                @btn-default-border;
-@ls-radiocheckox-color:                 @text-color;
-@ls-radiocheckox-bg:                    @body-bg;
-@ls-radiocheckox-hover-color:           @btn-default-hover-color;
-@ls-radiocheckox-hover-bg:              @btn-default-hover-bg;
-@ls-radiocheckox-checked-color:         @btn-primary-color;
-@ls-radiocheckox-checked-bg:            @btn-primary-hover-bg;
-@ls-radiocheckox-border-radius:         @border-radius-base;
+@ls-radiocheckbox-borderwidth:           1px;
+@ls-radiocheckbox-border:                @btn-default-border;
+@ls-radiocheckbox-color:                 @text-color;
+@ls-radiocheckbox-bg:                    @body-bg;
+@ls-radiocheckbox-hover-color:           @btn-default-hover-color;
+@ls-radiocheckbox-hover-bg:              @btn-default-hover-bg;
+@ls-radiocheckbox-checked-color:         @btn-primary-color;
+@ls-radiocheckbox-checked-bg:            @btn-primary-hover-bg;
+@ls-radiocheckbox-border-radius:         @border-radius-base;
 
-@ls-radiocheckoxpadding-vertical:       @padding-base-vertical;
-@ls-radiocheckoxpadding-horizontal:     @padding-large-horizontal; // Usage *2 and /2
+@ls-radiocheckboxpadding-vertical:       @padding-large-vertical;
+@ls-radiocheckboxpadding-horizontal:     @padding-large-horizontal; // Usage *2 and /2
 
 // Usage with template-skelvanilla-awesome-checkbox
 @ls-radiocheckbox-awesome-size:                20px;
@@ -67,8 +67,10 @@
 @ls-radiocheckbox-awesome-bgcolor:             @input-bg;
 @ls-radiocheckbox-awesome-checked-bgcolor:     @btn-primary-bg;
 @ls-radiocheckbox-awesome-checked-color:       @ls-radiocheckbox-awesome-bgcolor;
+// Only for radio
+@ls-radio-awesome-checked-content:             "\f111"; // fa-circle
 // Only for checkbox
 @ls-checkbox-awesome-checked-bgcolor:          @ls-radiocheckbox-awesome-checked-bgcolor;
 @ls-checkbox-awesome-checked-color:            @ls-radiocheckbox-awesome-checked-color;
-@ls-checkbox-awesome-checked-content:          "\f00c";
+@ls-checkbox-awesome-checked-content:          "\f00c"; // fa-check
 

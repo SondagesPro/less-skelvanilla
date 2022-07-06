@@ -58,8 +58,13 @@
   border-radius: @input-border-radius-small;
 }
 .radio-item label::after {
-  content: " ";
   background: @ls-radiocheckbox-awesome-checked-bgcolor;
+  color: @ls-radiocheckbox-awesome-checked-bgcolor;
+  font-family: "FontAwesome";
+  content: @ls-radio-awesome-checked-content;
+  font-size:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
+  line-height:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
+  text-indent:0.1em;
 }
 .checkbox-item label::after {
   background: @ls-checkbox-awesome-checked-bgcolor;
@@ -68,7 +73,7 @@
   content: @ls-checkbox-awesome-checked-content;
   font-size:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
   line-height:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
-  text-indent:0;
+  text-indent:0.1em;
 }
 .dir-ltr .radio-item label::before,.dir-ltr .checkbox-item label::before {
     left:0; margin-left: @ls-radiocheckbox-awesome-size/2;
@@ -138,7 +143,7 @@ only screen and (max-width: @screen-sm) {
       height: auto;
       line-height: @line-height-base;
       text-indent: 0;text-indent: initial;
-      padding: @ls-radiocheckoxpadding-vertical @ls-radiocheckbox-awesome-size;
+      padding: @ls-radiocheckboxpadding-vertical @ls-radiocheckbox-awesome-size;
       top: auto;
       clip: unset;
   }

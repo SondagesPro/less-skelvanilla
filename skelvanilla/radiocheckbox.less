@@ -2,70 +2,70 @@
 /* Todo : mixin this */
 
 .radio-list li.radio-item label , .checkbox-list li.checkbox-item label {
-    border: @ls-radiocheckox-borderwidth solid @ls-radiocheckox-border;
+    border: @ls-radiocheckbox-borderwidth solid @ls-radiocheckbox-border;
     cursor:pointer;
-    border-width: @ls-radiocheckox-borderwidth @ls-radiocheckox-borderwidth 0;
+    border-width: @ls-radiocheckbox-borderwidth @ls-radiocheckbox-borderwidth 0;
     margin:0;
 }
 .radio-list li.radio-item:last-child label,.checkbox-list li.checkbox-item:last-child label,
 .radio-list li.radio-item.last-child label,.checkbox-list li.checkbox-item.last-child label
-  {border-bottom-width:@ls-radiocheckox-borderwidth;}
+  {border-bottom-width:@ls-radiocheckbox-borderwidth;}
 .radio-list li.radio-text-item,.checkbox-list li.checkbox-text-item {
-    border:@ls-radiocheckox-borderwidth solid @ls-radiocheckox-border;
+    border:@ls-radiocheckbox-borderwidth solid @ls-radiocheckbox-border;
     cursor:pointer;
-    border-width: @ls-radiocheckox-borderwidth @ls-radiocheckox-borderwidth 0;
+    border-width: @ls-radiocheckbox-borderwidth @ls-radiocheckbox-borderwidth 0;
     margin:0;
 }
 
 .radio-list li.radio-text-item:last-child ,.checkbox-list li.checkbox-text-item:last-child,
 .radio-list li.radio-text-item.last-child ,.checkbox-list li.checkbox-text-item.last-child
-  {border-bottom-width:@ls-radiocheckox-borderwidth;}
-ul.form-inline li.radio-item label{border:@ls-radiocheckox-borderwidth solid @ls-radiocheckox-border;}
+  {border-bottom-width:@ls-radiocheckbox-borderwidth;}
+ul.form-inline li.radio-item label{border:@ls-radiocheckbox-borderwidth solid @ls-radiocheckbox-border;}
 
 /* Round border on list */
 .radio-list li:first-child label,.checkbox-list ul li:first-child label,
 .radio-list li.first-child label,.checkbox-list ul li.first-child label
-  {border-top-left-radius: @ls-radiocheckox-border-radius;border-top-right-radius: @ls-radiocheckox-border-radius;}
+  {border-top-left-radius: @ls-radiocheckbox-border-radius;border-top-right-radius: @ls-radiocheckbox-border-radius;}
 .radio-list ul li:last-child label,.checkbox-list ul li:last-child label,
 .radio-list ul li.last-child label,.checkbox-list ul li.last-child label
-  { border-bottom-left-radius: @ls-radiocheckox-border-radius; border-bottom-right-radius: @ls-radiocheckox-border-radius;}
+  { border-bottom-left-radius: @ls-radiocheckbox-border-radius; border-bottom-right-radius: @ls-radiocheckbox-border-radius;}
 .radio-list li.radio-text-item:last-child ,.checkbox-list li.checkbox-text-item:last-child,
 .radio-list li.radio-text-item.last-child ,.checkbox-list li.checkbox-text-item.last-child
-  {border-bottom-left-radius: @ls-radiocheckox-border-radius; border-bottom-right-radius:@ls-radiocheckox-border-radius;}
-ul.form-inline li.radio-item label{border-radius: @ls-radiocheckox-border-radius;}
+  {border-bottom-left-radius: @ls-radiocheckbox-border-radius; border-bottom-right-radius:@ls-radiocheckbox-border-radius;}
+ul.form-inline li.radio-item label{border-radius: @ls-radiocheckbox-border-radius;}
 
 /* coloring */
 li.radio-item label,li.checkbox-item label
-{ background-color: @ls-radiocheckox-bg;color:@ls-radiocheckox-color}
+{ background-color: @ls-radiocheckbox-bg;color:@ls-radiocheckbox-color}
 .radio-list .radio-text-item,.checkbox-list .checkbox-text-item
-  {background-color: @ls-radiocheckox-bg;color:@ls-radiocheckox-color}
+  {background-color: @ls-radiocheckbox-bg;color:@ls-radiocheckbox-color}
 li.radio-item.other-item label,li.checkbox-item.other-item label
   {background-color: transparent;}
 /* checked */
 .radio-item input[type="radio"]:checked + label,.checkbox-item input[type="checkbox"]:checked + label
-  {background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
+  {background:@ls-radiocheckbox-checked-bg;color:@ls-radiocheckbox-checked-color;}
 .radio-text-item input[type="radio"]:checked + label,.checkbox-text-item input[type="checkbox"]:checked + label
   {background:transparent;color:inherit;}
 .radio-text-item.answer-checked,.checkbox-text-item.answer-checked
-  {background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
+  {background:@ls-radiocheckbox-checked-bg;color:@ls-radiocheckbox-checked-color;}
 /* hover */
 .radio-item label:hover,.checkbox-item label:hover,.checkbox-item input[type="checkbox"]:checked + label:hover
-  {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
+  {background:@ls-radiocheckbox-hover-bg;color:@ls-radiocheckbox-hover-color}
 /* focus */
 li.radio-item input[type="radio"]:focus + label,li.checkbox-item input[type="checkbox"]:focus + label,li.checkbox-item input[type="checkbox"]:checked:focus + label
 li.radio-text-item input[type="radio"]:focus + label,li.checkbox-text-item input[type="checkbox"]:focus + label
-  {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
+  {background:@ls-radiocheckbox-hover-bg;color:@ls-radiocheckbox-hover-color}
 
 .js li.radio-text-item:hover,.js .checkbox-list li.checkbox-text-item:hover
-  {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
+  {background:@ls-radiocheckbox-hover-bg;color:@ls-radiocheckbox-hover-color}
 .js li.radio-text-item:hover label,.js .checkbox-list li.checkbox-text-item:hover label
-  {color:@ls-radiocheckox-hover-color}
+  {color:@ls-radiocheckbox-hover-color}
 /* no answer */
 .no-anwser-item input[type="radio"]:checked + label,
 .noanswer-item input[type="radio"]:checked + label
   {background:transparent;color:inherit;}
 li.no-anwser-item input[type="radio"]:checked + label,li.noanswer-item input[type="radio"]:checked + label
-  { background-color: @ls-radiocheckox-bg;color:@ls-radiocheckox-color}
+  { background-color: @ls-radiocheckbox-bg;color:@ls-radiocheckbox-color}
 
 .radio-item input[type="radio"][disabled] + label,.checkbox-item input[type="radio"][disabled] + label
 {
@@ -73,19 +73,19 @@ li.no-anwser-item input[type="radio"]:checked + label,li.noanswer-item input[typ
   cursor:inherit;color:mix(@text-color, @body-bg, 50%);
 }
 /* ranking */
-.ls-choice{border-color: @ls-radiocheckox-border;}
-.sortable-rank .ls-choice{background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
-.ls-choice:hover{background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
+.ls-choice{border-color: @ls-radiocheckbox-border;}
+.sortable-rank .ls-choice{background:@ls-radiocheckbox-checked-bg;color:@ls-radiocheckbox-checked-color;}
+.ls-choice:hover{background:@ls-radiocheckbox-hover-bg;color:@ls-radiocheckbox-hover-color}
 
 
 /* table */
-.js table.ls-answers tbody tr td.radio-item:hover {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color;}
-.js table.ls-answers tbody tr td.radio-item.answer-checked{background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
+.js table.ls-answers tbody tr td.radio-item:hover {background:@ls-radiocheckbox-hover-bg;color:@ls-radiocheckbox-hover-color;}
+.js table.ls-answers tbody tr td.radio-item.answer-checked{background:@ls-radiocheckbox-checked-bg;color:@ls-radiocheckbox-checked-color;}
 .js table.ls-answers tbody tr td.noanswer-item.answer-checked{background-color:transparent;color:inherit;}
 .js table.ls-answers tbody tr td.no-answer-item.answer-checked{background-color:transparent;color:inherit;}
 
-.js table.ls-answers tbody tr td.checkbox-item.answer-checked{background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
-.js table.ls-answers tbody tr td.checkbox-item:hover {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color;}
+.js table.ls-answers tbody tr td.checkbox-item.answer-checked{background:@ls-radiocheckbox-checked-bg;color:@ls-radiocheckbox-checked-color;}
+.js table.ls-answers tbody tr td.checkbox-item:hover {background:@ls-radiocheckbox-hover-bg;color:@ls-radiocheckbox-hover-color;}
 
 .checkbox-item label.ls-label-xs-visibility, .radio-item label.ls-label-xs-visibility,
 .checkbox-item input[type="checkbox"]:checked + label.ls-label-xs-visibility, .radio-item input[type="radio"]:checked + label.ls-label-xs-visibility,
@@ -99,11 +99,11 @@ only screen and (max-width: @screen-sm) {
   .no-more-table .ls-answers > tbody > tr > td.checkbox-item ,
   .no-more-table .ls-answers > tbody > tr > td.radio-item ,
   .no-more-table .ls-answers > tbody > tr > th.information-item{
-      border: @ls-radiocheckox-borderwidth solid @ls-radiocheckox-border;
-      border-width: @ls-radiocheckox-borderwidth 0 0;
+      border: @ls-radiocheckbox-borderwidth solid @ls-radiocheckbox-border;
+      border-width: @ls-radiocheckbox-borderwidth 0 0;
   }
   .no-more-table table.ls-answers tbody tr
-      {border-radius:@ls-radiocheckox-border-radius;}
+      {border-radius:@ls-radiocheckbox-border-radius;}
   .no-more-table table.ls-answers
       {border:0 none}
   .no-more-table table.ls-answers td.radio-item,
@@ -113,19 +113,19 @@ only screen and (max-width: @screen-sm) {
   .no-more-table table.ls-answers td.checkbox-item label
       {margin-bottom: 0;}
   .no-more-table  td.radio-item label.ls-label-xs-visibility,.no-more-table td.checkbox-item label.ls-label-xs-visibility
-      { background-color: @ls-radiocheckox-bg;color:@ls-radiocheckox-color}
+      { background-color: @ls-radiocheckbox-bg;color:@ls-radiocheckbox-color}
   .no-more-table .radio-item input[type="radio"]:checked + label.ls-label-xs-visibility,
   .no-more-table .checkbox-item input[type="checkbox"]:checked + label.ls-label-xs-visibility
-      {background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
+      {background:@ls-radiocheckbox-checked-bg;color:@ls-radiocheckbox-checked-color;}
   .no-more-table .radio-item input[type="radio"]:checked + label.ls-label-xs-visibility,
   .no-more-table .checkbox-item input[type="checkbox"]:checked + label.ls-label-xs-visibility
-      {background:@ls-radiocheckox-checked-bg;color:@ls-radiocheckox-checked-color;}
+      {background:@ls-radiocheckbox-checked-bg;color:@ls-radiocheckbox-checked-color;}
   .no-more-table .no-answer-item input[type="radio"]:checked + label.ls-label-xs-visibility,
   .no-more-table .noanswer-item input[type="checkbox"]:checked + label.ls-label-xs-visibility
       {background:transparent;color:inherit;}
   .no-more-table .radio-item label.ls-label-xs-visibility:hover,.no-more-table .checkbox-item label.ls-label-xs-visibility:hover
-      {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
+      {background:@ls-radiocheckbox-hover-bg;color:@ls-radiocheckbox-hover-color}
   /* focus */
   .no-more-table td.radio-item input[type="radio"]:focus + label,.no-more-table td.checkbox-item input[type="checkbox"]:focus + label
-    {background:@ls-radiocheckox-hover-bg;color:@ls-radiocheckox-hover-color}
+    {background:@ls-radiocheckbox-hover-bg;color:@ls-radiocheckbox-hover-color}
 }
