@@ -37,7 +37,8 @@
   box-sizing: border-box;
 }
 .radio-item input[type="radio"]:focus + label::before ,.checkbox-item input[type="checkbox"]:focus + label::before{
-    box-shadow: 0 0 @ls-radiocheckbox-awesome-size/4 1px @input-border-focus;border-color:@input-border-focus;
+    box-shadow: 0 0 0 @link-focus-width rgba(red(@link-focus-color), green(@link-focus-color), blue(@link-focus-color), if((isdefined(@link-focus-transparency)),@link-focus-transparency,0.5));
+    border-color:@input-border-focus;
 }
 .radio-item label::after,.checkbox-item label::after {
   display: block;

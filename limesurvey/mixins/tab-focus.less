@@ -1,3 +1,5 @@
 .tab-focus() {
-  outline: thin dotted;
+    outline:@link-focus-color @link-focus-width @link-focus-style;
+    outline-color:rgba(red(@link-focus-color), green(@link-focus-color), blue(@link-focus-color), if((isdefined(@link-focus-transparency)),@link-focus-transparency,0.5));
+    outline-offset:@link-focus-offset;
 }
