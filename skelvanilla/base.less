@@ -39,21 +39,21 @@ th.col-hover{
 .radio-item input[type="radio"],.checkbox-item input[type="checkbox"] {top:50%;}
 .radio-item input[type="radio"], .checkbox-item input[type="checkbox"] {margin-top:-@font-size-base*0.6;}
 .radio-list .radio-item ,.checkbox-list .checkbox-item,.answers-list .radio-item {margin:0}
-.dir-ltr .radio-item input[type="radio"],.dir-ltr .checkbox-item input[type="checkbox"] {left: @ls-radiocheckboxpadding-horizontal*2/3;}
-.dir-rtl .radio-item input[type="radio"],.dir-rtl .checkbox-item input[type="checkbox"] {right: @ls-radiocheckboxpadding-horizontal*2/3;}
+.dir-ltr .radio-item input[type="radio"],.dir-ltr .checkbox-item input[type="checkbox"] {left: (@ls-radiocheckboxpadding-horizontal * 2 / 3);}
+.dir-rtl .radio-item input[type="radio"],.dir-rtl .checkbox-item input[type="checkbox"] {right: (@ls-radiocheckboxpadding-horizontal * 2 / 3);}
 
 .radio-list .radio-item label ,.checkbox-list .checkbox-item label,.answers-list .radio-item label {padding: @ls-radiocheckboxpadding-vertical @ls-radiocheckboxpadding-horizontal;}
-.dir-ltr .radio-list .radio-item label ,.dir-ltr .checkbox-list .checkbox-item label,.dir-ltr .answers-list .radio-item label {padding-left:@ls-radiocheckboxpadding-horizontal*2}
-.dir-rtl .radio-list .radio-item label ,.dir-rtl .checkbox-list .checkbox-item label,.dir-rtl .answers-list .radio-item label {padding-right:@ls-radiocheckboxpadding-horizontal*2}
+.dir-ltr .radio-list .radio-item label ,.dir-ltr .checkbox-list .checkbox-item label,.dir-ltr .answers-list .radio-item label {padding-left:(@ls-radiocheckboxpadding-horizontal * 2)}
+.dir-rtl .radio-list .radio-item label ,.dir-rtl .checkbox-list .checkbox-item label,.dir-rtl .answers-list .radio-item label {padding-right:(@ls-radiocheckboxpadding-horizontal * 2)}
 
 .checkbox-text-item .checkbox-item label{padding: @ls-radiocheckboxpadding-vertical @ls-radiocheckboxpadding-horizontal*2;}
 .radio-item label , .checkbox-item label,.radio-text-item label {min-height:@line-height-computed;}
 .checkbox-text-item .checkbox-item label{min-height:@line-height-computed;}
 
-.dir-ltr .radio-list  .radio-text-item label,.dir-ltr .checkbox-list  .checkbox-text-item label{padding-left:@ls-radiocheckboxpadding-horizontal*2}
-.dir-ltr .radio-list  .radio-text-item input[type="radio"],.dir-ltr .checkbox-list  .checkbox-text-item input[type="checkbox"]{left:@ls-radiocheckboxpadding-horizontal*2/3}
-.dir-rtl .radio-list  .radio-text-item label,.dir-rtl .checkbox-list  .checkbox-text-item label{padding-right:@ls-radiocheckboxpadding-horizontal*2}
-.dir-rtl .radio-list  .radio-text-item input[type="radio"],.dir-rtl .checkbox-list  .checkbox-text-item input[type="checkbox"]{right:@ls-radiocheckboxpadding-horizontal*2/3}
+.dir-ltr .radio-list  .radio-text-item label,.dir-ltr .checkbox-list  .checkbox-text-item label{padding-left:(@ls-radiocheckboxpadding-horizontal * 2)}
+.dir-ltr .radio-list  .radio-text-item input[type="radio"],.dir-ltr .checkbox-list  .checkbox-text-item input[type="checkbox"]{left:(@ls-radiocheckboxpadding-horizontal * 2 / 3)}
+.dir-rtl .radio-list  .radio-text-item label,.dir-rtl .checkbox-list  .checkbox-text-item label{padding-right:(@ls-radiocheckboxpadding-horizontal * 2)}
+.dir-rtl .radio-list  .radio-text-item input[type="radio"],.dir-rtl .checkbox-list  .checkbox-text-item input[type="checkbox"]{right:(@ls-radiocheckboxpadding-horizontal * 2 / 3)}
 
 /* Inside table */
 td.radio-item input[type="radio"], td.checkbox-item input[type="checkbox"] {

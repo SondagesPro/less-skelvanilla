@@ -4,7 +4,7 @@
     width: @ls-radiocheckbox-awesome-size;
     height: @ls-radiocheckbox-awesome-size;
     top: 50%;
-    margin-top : -@ls-radiocheckbox-awesome-size*2/3;
+    margin-top : -(@ls-radiocheckbox-awesome-size * 2 / 3);
     box-sizing: border-box;
     opacity:0;
 }
@@ -12,16 +12,16 @@
   padding-right: @ls-radiocheckbox-awesome-size;padding-left: @ls-radiocheckbox-awesome-size;
 }
 .dir-ltr .answers-list .radio-item label,.dir-ltr .answers-list .checkbox-item label {
-  padding-left: @ls-radiocheckbox-awesome-size*2;
+  padding-left: (@ls-radiocheckbox-awesome-size * 2);
 }
 .dir-rtl .answers-list .radio-item label,.dir-rtl .answers-list .checkbox-item label {
-  padding-right: @ls-radiocheckbox-awesome-size*2;
+  padding-right: (@ls-radiocheckbox-awesome-size * 2);
 }
 .dir-ltr .radio-item input[type="radio"],.dir-ltr .checkbox-item input[type="radio"] {
-  left: @ls-radiocheckbox-awesome-size/2;
+  left: (@ls-radiocheckbox-awesome-size / 2);
 }
 .dir-rtl .radio-item input[type="radio"],.dir-rtl .checkbox-item input[type="radio"] {
-  right: @ls-radiocheckbox-awesome-size/2;
+  right: (@ls-radiocheckbox-awesome-size / 2);
 }
 .radio-item label::before,.checkbox-item label::before {
   content: " ";
@@ -30,21 +30,21 @@
   width: @ls-radiocheckbox-awesome-size;
   height: @ls-radiocheckbox-awesome-size;
   top: 50%;
-  margin-top : -@ls-radiocheckbox-awesome-size*2/3;
+  margin-top : -(@ls-radiocheckbox-awesome-size * 2 / 3);
   border:1px solid @ls-radiocheckbox-awesome-border;
   background-color: @ls-radiocheckbox-awesome-bgcolor;
   z-index:3;
   box-sizing: border-box;
 }
 .radio-item input[type="radio"]:focus + label::before ,.checkbox-item input[type="checkbox"]:focus + label::before{
-    box-shadow: 0 0 0 @link-focus-width rgba(red(@link-focus-color), green(@link-focus-color), blue(@link-focus-color), if((isdefined(@link-focus-transparency)),@link-focus-transparency,0.5));
+    box-shadow: 0 0 0 if((isdefined(@link-focus-width)),@link-focus-width,0.2rem) rgba(red(if((isdefined(@link-focus-color)),@link-focus-color,@link-color)), green(if((isdefined(@link-focus-color)),@link-focus-color,@link-color)), blue(if((isdefined(@link-focus-color)),@link-focus-color,@link-color)), if((isdefined(@link-focus-transparency)),@link-focus-transparency,0.5));
     border-color:@input-border-focus;
 }
 .radio-item label::after,.checkbox-item label::after {
   display: block;
   position: absolute;
-  width: (@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
-  height: (@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
+  width: (@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize * 2);
+  height: (@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize * 2);
   top: 50%;
   margin-top : -(@ls-radiocheckbox-awesome-size*2/3 - @ls-radiocheckbox-awesome-innerpaddingsize);
   z-index:3;
@@ -63,8 +63,8 @@
   color: @ls-radiocheckbox-awesome-checked-bgcolor;
   font-family: "FontAwesome";
   content: @ls-radio-awesome-checked-content;
-  font-size:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
-  line-height:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
+  font-size:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize * 2);
+  line-height:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize * 2);
   text-indent:0.1em;
 }
 .checkbox-item label::after {
@@ -72,21 +72,21 @@
   color:@ls-checkbox-awesome-checked-color;
   font-family: "FontAwesome";
   content: @ls-checkbox-awesome-checked-content;
-  font-size:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
-  line-height:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize*2);
+  font-size:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize * 2);
+  line-height:(@ls-radiocheckbox-awesome-size - @ls-radiocheckbox-awesome-innerpaddingsize * 2);
   text-indent:0.1em;
 }
 .dir-ltr .radio-item label::before,.dir-ltr .checkbox-item label::before {
-    left:0; margin-left: @ls-radiocheckbox-awesome-size/2;
+    left:0; margin-left: (@ls-radiocheckbox-awesome-size / 2);
 }
 .dir-ltr .radio-item label::after,.dir-ltr .checkbox-item label::after{
-    left: @ls-radiocheckbox-awesome-innerpaddingsize;margin-left: @ls-radiocheckbox-awesome-size/2;
+    left: @ls-radiocheckbox-awesome-innerpaddingsize;margin-left: (@ls-radiocheckbox-awesome-size / 2);
 }
 .dir-rtl .radio-item label::before,.dir-rtl .checkbox-item label::before {
-    right:0; margin-right: @ls-radiocheckbox-awesome-size/2;
+    right:0; margin-right: (@ls-radiocheckbox-awesome-size / 2);
 }
 .dir-rtl .radio-item label::after,.dir-rtl .checkbox-item label::after{
-    right: @ls-radiocheckbox-awesome-innerpaddingsize;margin-right: @ls-radiocheckbox-awesome-size/2;
+    right: @ls-radiocheckbox-awesome-innerpaddingsize;margin-right: (@ls-radiocheckbox-awesome-size / 2);
 }
 .radio-item input[type="radio"]:checked + label::after,.checkbox-item input[type="checkbox"]:checked + label::after {
   visibility: visible;
@@ -100,20 +100,20 @@
     display:block;
     overflow:hidden;
     position:relative;
-    width: @ls-radiocheckbox-awesome-size*3/2;
-    height: @ls-radiocheckbox-awesome-size*3/2;
-    line-height: @ls-radiocheckbox-awesome-size*3;
-    text-indent: @ls-radiocheckbox-awesome-size*3;
+    width: (@ls-radiocheckbox-awesome-size * 3 / 2);
+    height: (@ls-radiocheckbox-awesome-size * 3 / 2);
+    line-height: (@ls-radiocheckbox-awesome-size * 3);
+    text-indent: (@ls-radiocheckbox-awesome-size * 3);
     padding:0;
     top: 50%;
     box-sizing: border-box;
     clip: unset;
 }
 .radio-item label.ls-label-xs-visibility::before,.checkbox-item label.ls-label-xs-visibility::before {
-  margin-top : -@ls-radiocheckbox-awesome-size*1/2;
+  margin-top : -(@ls-radiocheckbox-awesome-size * 1 / 2);
 }
 .radio-item label.ls-label-xs-visibility::after,.checkbox-item label.ls-label-xs-visibility::after {
-  margin-top : -(@ls-radiocheckbox-awesome-size*1/2 - @ls-radiocheckbox-awesome-innerpaddingsize);
+  margin-top : -(@ls-radiocheckbox-awesome-size * 1 / 2 - @ls-radiocheckbox-awesome-innerpaddingsize);
 }
 
 .dir-ltr td.radio-item label.ls-label-xs-visibility,.dir-ltr td.checkbox-item label.ls-label-xs-visibility {
@@ -129,7 +129,7 @@ td.radio-item input[type="radio"],td.checkbox-item input[type="checkbox"] {
     box-sizing: border-box;
 }
 .radio-item label.ls-label-xs-visibility,.checkbox-item label.ls-label-xs-visibility{
-  margin-top:-@ls-radiocheckbox-awesome-size*1.5;
+  margin-top:-(@ls-radiocheckbox-awesome-size * 1.5);
 }
 
 @media
@@ -150,15 +150,15 @@ only screen and (max-width: @screen-sm) {
   }
   .no-more-table td.radio-item label.ls-label-xs-visibility::before,
   .no-more-table td.checkbox-item label.ls-label-xs-visibility::before
-    {margin-top : -@ls-radiocheckbox-awesome-size*2/3;}
+    {margin-top : -(@ls-radiocheckbox-awesome-size * 2 / 3);}
   .no-more-table td.radio-item label.ls-label-xs-visibility::after,.no-more-table td.checkbox-item label.ls-label-xs-visibility::after
-    {margin-top : -(@ls-radiocheckbox-awesome-size*2/3 - @ls-radiocheckbox-awesome-innerpaddingsize);}
+    {margin-top : -(@ls-radiocheckbox-awesome-size * 2 / 3 - @ls-radiocheckbox-awesome-innerpaddingsize);}
   .dir-ltr .no-more-table td.radio-item label.ls-label-xs-visibility,
   .dir-ltr .no-more-table td.checkbox-item label.ls-label-xs-visibility
-    {padding-left: @ls-radiocheckbox-awesome-size*2;left:auto;}
+    {padding-left: (@ls-radiocheckbox-awesome-size * 2);left:auto;}
   .dir-rtl .no-more-table td.radio-item label.ls-label-xs-visibility,
   .dir-rtl .no-more-table td.checkbox-item label.ls-label-xs-visibility
-    {padding-right: @ls-radiocheckbox-awesome-size*2;right:auto;}
+    {padding-right: (@ls-radiocheckbox-awesome-size * 2);right:auto;}
   .no-more-table .radio-item label.ls-label-xs-visibility,.no-more-table .checkbox-item label.ls-label-xs-visibility{
     margin-top:0;
   }

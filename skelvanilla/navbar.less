@@ -242,7 +242,7 @@
     padding-bottom: @navbar-padding-vertical;
     line-height: @line-height-computed;
     text-decoration: none;
-    border:@link-focus-width solid;
+    border:if((isdefined(@link-focus-width)),@link-focus-width,0.2rem) solid;
     border-radius: @border-radius-small;
     &:focus-visible {
       outline:0;
@@ -414,8 +414,8 @@
       background-color: @navbar-default-brand-hover-bg;
     }
     &:focus-visible {
-      border-color: @link-focus-color;
-      border-color: rgba(red(@link-focus-color), green(@link-focus-color), blue(@link-focus-color), 0.3);
+      border-color: if((isdefined(@link-focus-color)),@link-focus-color,@link-color);
+      border-color: rgba(red(if((isdefined(@link-focus-color)),@link-focus-color,@link-color)), green(if((isdefined(@link-focus-color)),@link-focus-color,@link-color)), blue(if((isdefined(@link-focus-color)),@link-focus-color,@link-color)), if((isdefined(@link-focus-transparency)),@link-focus-transparency,0.5));
     }
   }
 
@@ -433,8 +433,8 @@
         background-color: @navbar-default-link-hover-bg;
       }
       &:focus-visible {
-        border-color: @link-focus-color;
-        border-color: rgba(red(@link-focus-color), green(@link-focus-color), blue(@link-focus-color), 0.3);
+        border-color: if((isdefined(@link-focus-color)),@link-focus-color,@link-color);
+        border-color: rgba(red(if((isdefined(@link-focus-color)),@link-focus-color,@link-color)), green(if((isdefined(@link-focus-color)),@link-focus-color,@link-color)), blue(if((isdefined(@link-focus-color)),@link-focus-color,@link-color)), 0.3);
       }
     }
     > .active > a {
@@ -559,7 +559,7 @@
       background-color: @navbar-inverse-brand-hover-bg;
     }
     &:focus-visible {
-      border-color: @link-focus-color;
+      border-color: if((isdefined(@link-focus-color)),@link-focus-color,@link-color);
     }
   }
 
@@ -570,14 +570,14 @@
   .navbar-nav {
     > li > a {
       color: @navbar-inverse-link-color;
-      border-color:navbar-inverse-bg;
+      border-color:@navbar-inverse-bg;
       &:hover,
       &:focus {
         color: @navbar-inverse-link-hover-color;
         background-color: @navbar-inverse-link-hover-bg;
       }
       &:focus-visible {
-        border-color: @link-focus-color;
+        border-color: if((isdefined(@link-focus-color)),@link-focus-color,@link-color);
       }
     }
     > .active > a {

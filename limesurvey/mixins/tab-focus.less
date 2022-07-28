@@ -1,5 +1,5 @@
 .tab-focus() {
-    outline:@link-focus-color @link-focus-width @link-focus-style;
-    outline-color:rgba(red(@link-focus-color), green(@link-focus-color), blue(@link-focus-color), if((isdefined(@link-focus-transparency)),@link-focus-transparency,0.5));
-    outline-offset:@link-focus-offset;
+    outline:if((isdefined(@link-focus-color)),@link-focus-color,@link-color) if((isdefined(@link-focus-width)),@link-focus-width,0.2rem) if((isdefined(@link-focus-style)),@link-focus-style,solid);
+    outline-color:rgba(red(if((isdefined(@link-focus-color)),@link-focus-color,@link-color)), green(if((isdefined(@link-focus-color)),@link-focus-color,@link-color)), blue(if((isdefined(@link-focus-color)),@link-focus-color,@link-color)), if((isdefined(@link-focus-transparency)),@link-focus-transparency,0.5));
+    outline-offset:if((isdefined(@link-focus-offset)),@link-focus-offset,0.1rem);
 }

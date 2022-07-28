@@ -47,7 +47,7 @@ textarea {
 
 a {
   color: @link-color;
-  text-decoration: @link-decoration;
+  text-decoration: if((isdefined(@link-decoration)),@link-decoration,"underline");
   display:inline-block;
   border-radius:@border-radius-small;
 
