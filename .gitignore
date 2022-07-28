@@ -26,3 +26,7 @@ variables-extra.less
 /variablesnames/*
 /variablesnames/*/*
 !/variablesnames/variablesnames/purpose.md
+# npm
+/node_modules/*
+package.json
+package-lock.json
