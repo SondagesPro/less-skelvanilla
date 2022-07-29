@@ -17,7 +17,9 @@
   }
 }
 .table-fixed-header table.ls-answers > thead > tr > td,
-.table-fixed-header table.ls-answers > thead > tr > th{
+.table-fixed-header table.ls-answers > thead > tr > th,
+.table-fixed-header table.ls-answers > tbody > tr.ls-header > td
+{
     box-sizing: border-box;
     position: sticky;
     top: 0;
@@ -25,19 +27,28 @@
     z-index: 2000;
 }
 .table-fixed-header table.ls-answers > thead > tr > td,
-.table-fixed-header table.ls-answers > thead > tr > th{
+.table-fixed-header table.ls-answers > thead > tr > th,
+.table-fixed-header table.ls-answers > tbody > tr.ls-header > td
+{
   background-color: @body-bg;
 }
 .table-fixed-header .well table.ls-answers > thead > tr > td,
 .table-fixed-header .well table.ls-answers > thead > tr > th,
+.table-fixed-header .well table.ls-answers > tbody > tr.ls-header > td,
 .table-fixed-header.well table.ls-answers > thead > tr > td,
-.table-fixed-header.well table.ls-answers > thead > tr > th{
+.table-fixed-header.well table.ls-answers > thead > tr > th,
+.table-fixed-header.well table.ls-answers > tbody > tr.ls-header > td
+{
   background-color: @well-bg;
 }
 .table-fixed-header .panel table.ls-answers > thead > tr > td,
 .table-fixed-header .panel table.ls-answers > thead > tr > th,
+.table-fixed-header .panel table.ls-answers > tbody > tr.ls-header > td,
 .table-fixed-header.panel table.ls-answers > thead > tr > td,
-.table-fixed-header.panel table.ls-answers > thead > tr > th{
+.table-fixed-header.panel table.ls-answers > thead > tr > th,
+.table-fixed-header.panel table.ls-answers > tbody > tr.ls-header > td
+{
   background-color: @panel-bg;
 }
 .table-fixed-header .ls-heading-repeat{display:none}
+.table-fixed-header .ls-heading:not(.ls-header){display:none}
