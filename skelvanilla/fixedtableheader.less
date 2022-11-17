@@ -1,3 +1,4 @@
+/* Same than dropdown */
 .table-fixed-header table.table-bordered.ls-answers {
     border-collapse: separate;
 }
@@ -23,8 +24,8 @@
     box-sizing: border-box;
     position: sticky;
     top: 0;
-    /* same than header */
-    z-index: 2000;
+    /* Same than dropdown */
+    z-index: @zindex-dropdown;
 }
 .table-fixed-header table.ls-answers > thead > tr > td,
 .table-fixed-header table.ls-answers > thead > tr > th,
@@ -51,4 +52,4 @@
   background-color: @panel-bg;
 }
 .table-fixed-header .ls-heading-repeat{display:none}
-.table-fixed-header .ls-heading:not(.ls-header){display:none}
+.table-fixed-header tbody .ls-heading:not(.ls-header){display:none}
