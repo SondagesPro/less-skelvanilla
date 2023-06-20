@@ -7,11 +7,11 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-@gray-base:              #000;
-@gray-darker:            lighten(@gray-base, 13.5%); // #222
-@gray-dark:              lighten(@gray-base, 20%);   // #333
-@gray:                   lighten(@gray-base, 33.5%); // #555
-@gray-light:             #707070; /** ~ 43% lighten(@gray-base, 46.7%); // #777 */
+@gray-base:              #101010;
+@gray-darker:            #303030;
+@gray-dark:              #505050;
+@gray:                   #707070;
+@gray-light:             #909090;
 @gray-lighter:           #e0e0e0;
 
 @brand-primary:         #010203;
@@ -20,20 +20,37 @@
 @brand-warning:         #996E00;
 @brand-danger:          #B21313;
 
+//== Form states and alerts
+//
+@state-success-text:             #316132;
+@state-success-bg:               #E1FEDB;
+@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
+
+@state-info-text:                #18466E;
+@state-info-bg:                  #C6E3E9;
+@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
+
+@state-warning-text:             #603B2E;
+@state-warning-bg:               #FAF4D5;
+@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
+
+@state-danger-text:              #8E140D;
+@state-danger-bg:                #FFEBF0;
+@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
 
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #fff;
+@body-bg:               #FAF8F8;
 //** Global text color on `<body>`.
-@text-color:            @gray-darker;
+@text-color:            #2F2D2E;
 
 //** Global textual link color.
-@link-color:            #12538B;
+@link-color:            #1A4666;
 //** Link hover color set via `darken()` function.
-@link-hover-color:      darken(@link-color, 20%);
+@link-hover-color:      #22355A;
 //** Link hover decoration.
 @link-hover-decoration: underline;
 
@@ -173,14 +190,14 @@
 //##
 
 //** `<input>` background color
-@input-bg:                       #fff;
+@input-bg:                       @body-bg;
 //** `<input disabled>` background color
 @input-bg-disabled:              @gray-lighter;
 
 //** Text color for `<input>`s
-@input-color:                    @gray;
+@input-color:                    darken(@text-color,10%);
 //** `<input>` border color
-@input-border:                   #ccc;
+@input-border:                   @gray-light;
 
 // TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -192,10 +209,10 @@
 @input-border-radius-small:      @border-radius-small;
 
 //** Border color for inputs on focus
-@input-border-focus:             #66afe9;
+@input-border-focus:             @link-color;
 
 //** Placeholder text color
-@input-color-placeholder:        #999;
+@input-color-placeholder:        @gray;
 
 //** Default `.form-control` height
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2));
@@ -208,10 +225,10 @@
 @form-group-margin-bottom:       0.7rem;
 
 @legend-color:                   @gray-dark;
-@legend-border-color:            #e5e5e5;
+@legend-border-color:            @gray-light;
 
 //** Background color for textual input addons
-@input-group-addon-bg:           @gray-lighter;
+@input-group-addon-bg:           @gray-light;
 //** Border color for textual input addons
 @input-group-addon-border-color: @input-border;
 
@@ -485,24 +502,6 @@
 @jumbotron-heading-font-size:    (((@font-size-base * 4.5)*10)/10);
 
 
-//== Form states and alerts
-//
-@state-success-text:             #316132;
-@state-success-bg:               #dff0d8;
-@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
-
-@state-info-text:                #26566E;
-@state-info-bg:                  #d9edf7;
-@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
-
-@state-warning-text:             #6B552E;
-@state-warning-bg:               #fcf6c9;
-@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
-
-@state-danger-text:              #9C2A27;
-@state-danger-bg:                #f2dede;
-@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
-
 
 //== Tooltips
 //
@@ -511,10 +510,10 @@
 //** Tooltip max width
 @tooltip-max-width:           60em;
 //** Tooltip text color
-@tooltip-color:               #fff;
+@tooltip-color:               #F4F8FC;
 //** Tooltip background color
-@tooltip-bg:                  #000;
-@tooltip-opacity:             .9;
+@tooltip-bg:                  #22355A;
+@tooltip-opacity:             .95;
 
 //** Tooltip arrow width
 @tooltip-arrow-width:         5px;
@@ -527,7 +526,7 @@
 //##
 
 //** Popover body background color
-@popover-bg:                          #fff;
+@popover-bg:                          @body-bg;
 //** Popover maximum width
 @popover-max-width:                   40em;
 //** Popover border color
@@ -539,12 +538,12 @@
 @popover-title-bg:                    darken(@popover-bg, 3%);
 
 //** Popover arrow width
-@popover-arrow-width:                 0.8rem;
+@popover-arrow-width:                 10px;
 //** Popover arrow color
 @popover-arrow-color:                 @popover-bg;
 
 //** Popover outer arrow width
-@popover-arrow-outer-width:           0.9rem;
+@popover-arrow-outer-width:           (@popover-arrow-width + 1);
 //** Popover outer arrow color
 @popover-arrow-outer-color:           fadein(@popover-border-color, 5%);
 //** Popover outer arrow fallback color
@@ -688,26 +687,25 @@
 @list-group-link-hover-color:   @list-group-link-color;
 @list-group-link-heading-color: #333;
 
-
 //== Panels
 //
 //##
 
-@panel-bg:                    #fff;
+@panel-bg:                    @body-bg;
 @panel-body-padding:          1rem;
 @panel-heading-padding:       0.8rem 1rem;
 @panel-footer-padding:        @panel-heading-padding;
 @panel-border-radius:         @border-radius-base;
 
 //** Border color for elements within panels
-@panel-inner-border:          #ddd;
-@panel-footer-bg:             #f5f5f5;
+@panel-inner-border:          @gray-light;
+@panel-footer-bg:             @gray-lighter;
 
-@panel-default-text:          @gray-dark;
-@panel-default-border:        #ddd;
-@panel-default-heading-bg:    #f5f5f5;
+@panel-default-text:          @gray-darker;
+@panel-default-border:        @gray-light;
+@panel-default-heading-bg:    @gray-lighter;
 
-@panel-primary-text:          #fff;
+@panel-primary-text:          @body-bg;
 @panel-primary-border:        @brand-primary;
 @panel-primary-heading-bg:    @brand-primary;
 
@@ -751,8 +749,8 @@
 //
 //##
 
-@well-bg:                     #f8f8f8;
-@well-border:                 darken(@well-bg, 7%);
+@well-bg:                     #f6f5f4;
+@well-border:                 darken(@well-bg, 10%);
 
 
 //== Badges
