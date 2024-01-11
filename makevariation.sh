@@ -109,7 +109,7 @@ fi
 # cat variations-extra/myownvariables.less > variables.less
 
 # Make lsbootstrap.css with awesome button
-lessc --source-map --source-map-rootpath=https://gitlab.com/SondagesPro/SurveyThemes/less-limesurvey/raw/master/ theme-button_awesome.less bootstrap.css
+lessc --source-map --source-map-rootpath=https://gitlab.com/SondagesPro/SurveyThemes/less-skelvanilla/-/raw/master/ theme-button_awesome.less bootstrap.css
 
 # remove working files
 rm variables-init.less
